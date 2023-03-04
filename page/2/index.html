@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> K-_-SUN的博客</title>
+  <meta name="generator" content="hexo-theme-ayer">
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover5.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">K-_-SUN的博客</a></h1>
+      <div id="subtitle-box">
+        
+          <span id="subtitle">面朝大海，春暖花开</span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+
+<!-- Subtitle -->
+
+<div id="main">
+  <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-05-为Windows添加右键文件校验"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/"
+    >05.为Windows添加右键文件校验</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/" class="article-date">
+  <time datetime="2022-10-16T16:05:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>单个校验方式的bat</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v MUIVerb /t REG_SZ /d 文件校验 /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; SHA256&quot; /f</span><br></pre></td></tr></table></figure>
+<p>多个校验方式的bat</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v MUIVerb /t REG_SZ /d 文件校验 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v SubCommands /t REG_SZ /d &quot;&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu&quot; /v MUIVerb /t REG_SZ /d MD5 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; MD5&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu&quot; /v MUIVerb /t REG_SZ /d SHA256 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; SHA256&quot; /f</span><br></pre></td></tr></table></figure>
+<p>删除命令，无所谓bat还是cmd：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br></pre></td></tr></table></figure>
+<p>Note:如果要在右键菜单中显示中文就必须让bat使用ANSI编码</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-04-离线安装.Net FrameWork 3.5"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/04-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85.Net%20FrameWork%203.5/"
+    >04.离线安装.Net FrameWork 3.5</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/04-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85.Net%20FrameWork%203.5/" class="article-date">
+  <time datetime="2022-10-16T16:04:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line">Dism /online /Disable-Feature /FeatureName:NetFX3</span><br><span class="line">Dism /online /Enable-Feature /FeatureName:NetFX3 /Source:%~dp0 /NoRestart</span><br></pre></td></tr></table></figure>
+<p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭.Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录<br>Note:Net FrameWork 3.5的cab文件为Win10&#x2F;11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-03-Linux网速脚本"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/03-Linux%E7%BD%91%E9%80%9F%E8%84%9A%E6%9C%AC/"
+    >03.Linux网速脚本</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/03-Linux%E7%BD%91%E9%80%9F%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time datetime="2022-10-16T16:03:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"> </span><br><span class="line">ethn=$1</span><br><span class="line"> </span><br><span class="line">while true</span><br><span class="line">do</span><br><span class="line"> RX_pre=$(cat /proc/net/dev | grep $ethn | sed &#x27;s/:/ /g&#x27; | awk &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line"> TX_pre=$(cat /proc/net/dev | grep $ethn | sed &#x27;s/:/ /g&#x27; | awk &#x27;&#123;print $10&#125;&#x27;)</span><br><span class="line"> sleep 1</span><br><span class="line"> RX_next=$(cat /proc/net/dev | grep $ethn | sed &#x27;s/:/ /g&#x27; | awk &#x27;&#123;print $2&#125;&#x27;)</span><br><span class="line"> TX_next=$(cat /proc/net/dev | grep $ethn | sed &#x27;s/:/ /g&#x27; | awk &#x27;&#123;print $10&#125;&#x27;)</span><br><span class="line"> </span><br><span class="line"> clear</span><br><span class="line"> </span><br><span class="line"> RX=$(($&#123;RX_next&#125;-$&#123;RX_pre&#125;))</span><br><span class="line"> TX=$(($&#123;TX_next&#125;-$&#123;TX_pre&#125;))</span><br><span class="line"> </span><br><span class="line"> if [[ $RX -lt 1024 ]];then</span><br><span class="line"> RX=&quot;$&#123;RX&#125;B/s&quot;</span><br><span class="line"> elif [[ $RX -gt 1048576 ]];then</span><br><span class="line"> RX=$(echo $RX | awk &#x27;&#123;print $1/1048576 &quot;MB/s&quot;&#125;&#x27;)</span><br><span class="line"> else</span><br><span class="line"> RX=$(echo $RX | awk &#x27;&#123;print $1/1024 &quot;KB/s&quot;&#125;&#x27;)</span><br><span class="line"> fi</span><br><span class="line"> </span><br><span class="line"> if [[ $TX -lt 1024 ]];then</span><br><span class="line"> TX=&quot;$&#123;TX&#125;B/s&quot;</span><br><span class="line"> elif [[ $TX -gt 1048576 ]];then</span><br><span class="line"> TX=$(echo $TX | awk &#x27;&#123;print $1/1048576 &quot;MB/s&quot;&#125;&#x27;)</span><br><span class="line"> else</span><br><span class="line"> TX=$(echo $TX | awk &#x27;&#123;print $1/1024 &quot;KB/s&quot;&#125;&#x27;)</span><br><span class="line"> fi</span><br><span class="line"></span><br><span class="line"> echo &quot;* * * * * * * * * * * * *&quot;</span><br><span class="line"> echo -e &quot;*\t\t\t*&quot;</span><br><span class="line"> echo -e &quot;*\t当前时间\t*&quot;</span><br><span class="line"> echo -e &quot;*\t`date +%k:%M:%S`\t*&quot;</span><br><span class="line"> echo -e &quot;*\t\t\t*&quot;</span><br><span class="line"> echo &quot;* * * * * * * * * * * * *&quot;</span><br><span class="line"> echo &quot;&quot;</span><br><span class="line"> echo &quot;网卡：&quot;</span><br><span class="line"> echo &quot;$ethn&quot;</span><br><span class="line"> echo &quot;&quot;</span><br><span class="line"> echo -e &quot;下行(RX)&quot;</span><br><span class="line"> echo -e &quot;$RX&quot;</span><br><span class="line"> echo &quot;&quot;</span><br><span class="line"> echo -e &quot;上行(TX)&quot;</span><br><span class="line"> echo -e &quot;$TX&quot;</span><br><span class="line"> echo &quot;&quot;</span><br><span class="line"> </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>使用方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./netspeed.sh eth0</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-02-V2ray账号设置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/02-V2ray%E8%B4%A6%E5%8F%B7%E8%AE%BE%E7%BD%AE/"
+    >02.V2ray账号设置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/02-V2ray%E8%B4%A6%E5%8F%B7%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2022-10-16T16:02:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>根据截图，左单账号，右双账号(多账号同理)</p>
+<p><img src="/2022/10/17/02-V2ray%E8%B4%A6%E5%8F%B7%E8%AE%BE%E7%BD%AE/V2ray%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE.png" alt="V2ray账号配置" title="V2ray账号配置"></p>
+<p>创建账号时uuid通过以下命令或通过V2rayN客户端点击生成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/sys/kernel/random/uuid</span><br></pre></td></tr></table></figure>
+
+<p>修改完成的配置文件覆盖保存至：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<p>生效需重启，命令为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart v2ray</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-01-V2ray安装脚本"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/01-V2ray%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/"
+    >01.V2ray安装脚本</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/01-V2ray%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time datetime="2022-10-16T16:01:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/233boy/v2ray</span><br><span class="line">一键安装脚本链接</span><br></pre></td></tr></table></figure>
+<p>如果节点连接质量不佳，安装中的协议建议选择kcp。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> K-_-SUN
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">文章列表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/173924058">我的B站</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="mailto:kukusun@outlook.com">我的邮箱</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
