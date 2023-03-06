@@ -88,6 +88,153 @@
     
     
     <article
+  id="post-10-Explorer命令行参数"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/21/10-Explorer%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+    >10.Explorer命令行参数</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/21/10-Explorer%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/" class="article-date">
+  <time datetime="2022-10-20T16:01:00.000Z" itemprop="datePublished">2022-10-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">打开文件夹System32</span><br><span class="line">explorer.exe /root,&quot;C:\Windows\System32&quot;</span><br><span class="line"></span><br><span class="line">打开并选中文件calc.exe</span><br><span class="line">explorer.exe /select,&quot;C:\Windows\System32\calc.exe&quot;</span><br><span class="line"></span><br><span class="line">打开并选中文件夹System32</span><br><span class="line">explorer.exe /select,&quot;C:\Windows\System32&quot;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-09-Windows批量打开URL"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/20/09-Windows%E6%89%B9%E9%87%8F%E6%89%93%E5%BC%80URL/"
+    >09.Windows批量打开URL</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/20/09-Windows%E6%89%B9%E9%87%8F%E6%89%93%E5%BC%80URL/" class="article-date">
+  <time datetime="2022-10-19T16:02:00.000Z" itemprop="datePublished">2022-10-20</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for /f &quot;delims=&quot; %a in (C:\Users\administrator\Desktop\url.txt) do start %a</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-08-允许新版系统的SMB1连接"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/20/08-%E5%85%81%E8%AE%B8%E6%96%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E7%9A%84SMB1%E8%BF%9E%E6%8E%A5/"
+    >08.允许新版系统的SMB1连接</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/20/08-%E5%85%81%E8%AE%B8%E6%96%B0%E7%89%88%E7%B3%BB%E7%BB%9F%E7%9A%84SMB1%E8%BF%9E%E6%8E%A5/" class="article-date">
+  <time datetime="2022-10-19T16:01:00.000Z" itemprop="datePublished">2022-10-20</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters&quot; /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-07-用cmdkey添加远程桌面权限"
   class="article article-type-post"
   itemscope
@@ -274,7 +421,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line">Dism /online /Disable-Feature /FeatureName:NetFX3</span><br><span class="line">Dism /online /Enable-Feature /FeatureName:NetFX3 /Source:%~dp0 /NoRestart</span><br></pre></td></tr></table></figure>
-<p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭.Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录<br>Note:Net FrameWork 3.5的cab文件为Win10&#x2F;11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p>
+<p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭.Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录<br>Note:Net FrameWork 3.5的cab文件为Win10&#x2F;Win11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p>
  
       <!-- reward -->
       
