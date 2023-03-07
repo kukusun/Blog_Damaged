@@ -4,6 +4,166 @@
   
     
     <entry>
+      <title>41.MediaCreationTool下载Win10&amp;11企业版</title>
+      <link href="/2023/02/03/41-MediaCreationTool%E4%B8%8B%E8%BD%BDWin10&amp;11%E4%BC%81%E4%B8%9A%E7%89%88/"/>
+      <url>/2023/02/03/41-MediaCreationTool%E4%B8%8B%E8%BD%BDWin10&amp;11%E4%BC%81%E4%B8%9A%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MediaCreationTool.exe /Eula Accept /Retail /MediaArch x64 /MediaLangCode zh-CN /MediaEdition Enterprise</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>40.卸载Win11小组件</title>
+      <link href="/2023/02/03/40-%E5%8D%B8%E8%BD%BDWin11%E5%B0%8F%E7%BB%84%E4%BB%B6/"/>
+      <url>/2023/02/03/40-%E5%8D%B8%E8%BD%BDWin11%E5%B0%8F%E7%BB%84%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget uninstall &quot;Windows Web Experience Pack&quot;</span><br></pre></td></tr></table></figure><p>WinGet其它详细用法请参考：<a href="https://m763982342.github.io/2023/02/03/39-WinGet%E5%91%BD%E4%BB%A4%E8%AF%A6%E6%83%85/">“WinGet命令详情”</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>39.WinGet命令详情</title>
+      <link href="/2023/02/03/39-WinGet%E5%91%BD%E4%BB%A4%E8%AF%A6%E6%83%85/"/>
+      <url>/2023/02/03/39-WinGet%E5%91%BD%E4%BB%A4%E8%AF%A6%E6%83%85/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">WinGet 命令行实用工具可从命令行安装应用程序和其他程序包。</span><br><span class="line"></span><br><span class="line">使用情况: winget [&lt;命令&gt;] [&lt;选项&gt;]</span><br><span class="line"></span><br><span class="line">下列命令有效:</span><br><span class="line">  install    安装给定的程序包</span><br><span class="line">  show       显示包的相关信息</span><br><span class="line">  source     管理程序包的来源</span><br><span class="line">  search     查找并显示程序包的基本信息</span><br><span class="line">  list       显示已安装的程序包</span><br><span class="line">  upgrade    显示并执行可用升级</span><br><span class="line">  uninstall  卸载给定的程序包</span><br><span class="line">  hash       哈希安装程序的帮助程序</span><br><span class="line">  validate   验证清单文件</span><br><span class="line">  settings   打开设置或设置管理员设置</span><br><span class="line">  features   显示实验性功能的状态</span><br><span class="line">  export     导出已安装程序包的列表</span><br><span class="line">  import     安装文件中的所有程序包</span><br><span class="line"></span><br><span class="line">如需特定命令的更多详细信息，请向其传递帮助参数。 [-?]</span><br><span class="line"></span><br><span class="line">下列选项可用：</span><br><span class="line">  -v,--version显示工具的版本</span><br><span class="line">  --info显示工具的常规信息</span><br><span class="line">  -?,--help显示选定命令的帮助信息</span><br><span class="line">  --wait提示用户在退出前按任意键</span><br><span class="line">  --verbose,--verbose-logs启用 WinGet 的详细日志记录</span><br><span class="line">  --disable-interactivity禁用交互式提示</span><br><span class="line"></span><br><span class="line">可在此找到更多帮助: &quot;https://aka.ms/winget-command-help&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>38.Windows组策略查询表</title>
+      <link href="/2023/01/31/38-Windows%E7%BB%84%E7%AD%96%E7%95%A5%E6%9F%A5%E8%AF%A2%E8%A1%A8/"/>
+      <url>/2023/01/31/38-Windows%E7%BB%84%E7%AD%96%E7%95%A5%E6%9F%A5%E8%AF%A2%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<p>官方网站：<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=25250">https://www.microsoft.com/en-us/download/details.aspx?id=25250</a></p><p>个人备份：<br><a href="https://pan.baidu.com/s/1cSkNVFOS4pi6XesaRFUwyQ">https://pan.baidu.com/s/1cSkNVFOS4pi6XesaRFUwyQ</a><br>密码：e63h<br>文件为：“Windows_PolicySettings.xlsx”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>37.Visual Studio创建系统服务程序</title>
+      <link href="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/"/>
+      <url>/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<p>1.选择“Windows 服务”创建项目<br><img src="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/01.png" alt="Windows 服务" title="Windows 服务"><br>2.在Service.cs中创建安装程序<br><img src="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/02.png" alt="点击添加安装程序" title="点击添加安装程序"><br>3.serviceInstaller填写Description、DisplayName、ServiceName，其对应关系如下图。StartType设置为Automatic让启动类型设置为自动<br><img src="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/03.png"><br><img src="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/04.png"><br>4.serviceProcessInstaller的Account更改为LocalSystem。<br><img src="/2023/01/30/37-Visual%20Studio%E5%88%9B%E5%BB%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F/05.png"><br>5.编写代码，在Service.cs的OnStart编写代码<br>6.安装卸载命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#安装</span><br><span class="line">C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe 程序路径</span><br><span class="line">#卸载</span><br><span class="line">C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe -u 程序路径</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> C# </tag>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>36.将Edge所有用户数据导出</title>
+      <link href="/2023/01/28/36-%E5%B0%86Edge%E6%89%80%E6%9C%89%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/"/>
+      <url>/2023/01/28/36-%E5%B0%86Edge%E6%89%80%E6%9C%89%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Edge用户数据目录：</span><br><span class="line">C:\Users\用户名\AppData\Local\Microsoft\Edge</span><br></pre></td></tr></table></figure><p>参考：<br><a href="https://answers.microsoft.com/zh-hans/microsoftedge/forum/all/%E6%80%8E%E4%B9%88%E6%8A%8Aedge%E7%9A%84%E7%94%A8/78f4615d-c41b-4145-b42b-b718b32d98e8">https://answers.microsoft.com/zh-hans/microsoftedge/forum/all/%E6%80%8E%E4%B9%88%E6%8A%8Aedge%E7%9A%84%E7%94%A8/78f4615d-c41b-4145-b42b-b718b32d98e8</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> 浏览器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>35.Win10&amp;Win11下载官网</title>
+      <link href="/2023/01/28/35-Win10&amp;Win11%E4%B8%8B%E8%BD%BD%E5%AE%98%E7%BD%91/"/>
+      <url>/2023/01/28/35-Win10&amp;Win11%E4%B8%8B%E8%BD%BD%E5%AE%98%E7%BD%91/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">正式版下载</span><br><span class="line">https://www.microsoft.com/zh-cn/software-download/home</span><br><span class="line"></span><br><span class="line">内测版</span><br><span class="line">https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Win10企业版(评估)</span><br><span class="line">https://www.microsoft.com/zh-cn/evalcenter/download-windows-10-enterprise</span><br><span class="line"></span><br><span class="line">Win11企业版(评估)</span><br><span class="line">https://www.microsoft.com/zh-cn/evalcenter/download-windows-11-enterprise</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>34.下载Chrome&amp;Edge离线安装包(包括Win7&amp;8最后可用版)</title>
+      <link href="/2023/01/28/34-%E4%B8%8B%E8%BD%BDChrome&amp;Edge%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85(%E5%8C%85%E6%8B%ACWin7&amp;8%E6%9C%80%E5%90%8E%E5%8F%AF%E7%94%A8%E7%89%88)/"/>
+      <url>/2023/01/28/34-%E4%B8%8B%E8%BD%BDChrome&amp;Edge%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85(%E5%8C%85%E6%8B%ACWin7&amp;8%E6%9C%80%E5%90%8E%E5%8F%AF%E7%94%A8%E7%89%88)/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Edge浏览器</span><br><span class="line">https://www.microsoft.com/zh-cn/edge/business</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Chrome浏览器</span><br><span class="line">32位：</span><br><span class="line">https://www.google.com/intl/zh-CN/chrome/?standalone=1&amp;platform=win</span><br><span class="line">64位：</span><br><span class="line">https://www.google.com/intl/zh-CN/chrome/?standalone=1&amp;platform=win64</span><br><span class="line">国内官网链接相同，只需把.com换成.cn</span><br></pre></td></tr></table></figure><hr><p>Win7&amp;Win8最后可用版存放地址：<br><a href="https://pan.baidu.com/s/1cSkNVFOS4pi6XesaRFUwyQ">https://pan.baidu.com/s/1cSkNVFOS4pi6XesaRFUwyQ</a><br>密码：e63h<br><br>找到“浏览器(Win7&amp;8最新版)”文件夹<br>Chrome开头为谷歌Chrome浏览器，Edge开头为Microsoft Edge浏览器<br>x86表示为32位版本，x64为64位版本<br>Edge浏览器保留了一份企业版(文件名带Enterprise)，虽然没用出来企业不企业有什么差别，但还是选择保留了一份</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 浏览器 </tag>
+            
+            <tag> 软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>33.IPTV源获取网站</title>
       <link href="/2023/01/28/33-IPTV%E6%BA%90%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99/"/>
       <url>/2023/01/28/33-IPTV%E6%BA%90%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99/</url>
@@ -627,6 +787,19 @@
             <tag> V2ray </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>00.简单笔记</title>
+      <link href="/2000/01/01/00-%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/"/>
+      <url>/2000/01/01/00-%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码不太对哦，请重新输入！" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="2b3539df2fd71ce422d56050554ec53b74d1d338135e072b15164d2fce820318">17f908695d5b70704ef3590d02c80be272fcdd492a39df469fdf42b3ffc5590e13758f848a79cc3aa31b647430949c25f0e8bce26f34cc85452b6338b08c8891831f1de99b5133d51e4ebe658a43fd9a92b7e2a95d1f35e6dc5839e70a18a054cd9a18deab79b8fb99eab141473466d434af7d0faac267d4aa6752b067afaa373672003c2652a4ac1b9f1bf10b566791</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请在此处输入密码</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
       
     </entry>
     
