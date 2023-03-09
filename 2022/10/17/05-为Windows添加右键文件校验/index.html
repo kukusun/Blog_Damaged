@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">340</span>
+            <span class="post-count">205</span>
         </span>
     </span>
 
@@ -94,19 +94,18 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>单个校验方式的bat</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v MUIVerb /t REG_SZ /d 文件校验 /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; SHA256&quot; /f</span><br></pre></td></tr></table></figure>
-<p>多个校验方式的bat</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v MUIVerb /t REG_SZ /d 文件校验 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /v SubCommands /t REG_SZ /d &quot;&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu&quot; /v MUIVerb /t REG_SZ /d MD5 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\01menu\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; MD5&quot; /f</span><br><span class="line"></span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu&quot; /v MUIVerb /t REG_SZ /d SHA256 /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu\command&quot; /f</span><br><span class="line">reg add &quot;HKEY_CLASSES_ROOT\*\shell\FileHash\shell\02menu\command&quot; /ve /t REG_SZ /d &quot;cmd.exe /K certutil -hashfile \&quot;%%1\&quot; SHA256&quot; /f</span><br></pre></td></tr></table></figure>
-<p>删除命令，无所谓bat还是cmd：</p>
+  <h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p>添加删除校验的Bat压缩包：<a href="./%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C.zip">点此下载</a></p>
+<p>添加单个校验项请运行“右键文件校验 - 单个.bat”<br>添加多个校验项请运行“右键文件校验 - 多个.bat”<br>只需临时校验则直接拖动需校验文件到“文件校验 - 拖放.bat”上松开<br>删除右键菜单校验项可运行“删除右键文件校验项.bat”，或直接在CMD中运行以下命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br></pre></td></tr></table></figure>
-<p>Note:如果要在右键菜单中显示中文就必须让bat使用ANSI编码</p>
+<h1 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h1><p>如需替换单个校验项的校验类型则将“右键文件校验 - 单个.bat”中第9行的SHA256改为你想要的校验类型<br>如需向多个校验项中添加更多的校验项则复制01menu然后按照下图上的详细说明粘贴修改<br><img src="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/%E7%A4%BA%E4%BE%8B.png" alt="添加多校验项示例" title="添加多校验项示例"></p>
  
       <!-- reward -->
       
