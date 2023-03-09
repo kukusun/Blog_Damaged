@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>14.Windows开机自动登录账户 |  K-_-SUN的博客</title>
+      <title>14.Windows开机自动登录账户 |  K的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -104,7 +104,7 @@
 <p>方法一：<br>添加注册表。此方式为明文密码，方法二更安全，建议优先使用方法二。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v AutoAdminLogon /t REG_SZ /d 1 /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultUserName /t REG_SZ /d administrator /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultPassword /t REG_SZ /d 123456 /f</span><br></pre></td></tr></table></figure>
 <p>方法二：</p>
-<p>使用netplwiz中取消勾选用户必须输入用户名和密码来完成，如果没有该选项请参考 <a target="_blank" rel="noopener" href="https://ksun-76.github.io/2022/10/21/13-netplwiz%E6%97%A0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/">“netplwiz无自动登录选项”</a> 进行设置。</p>
+<p>使用netplwiz中取消勾选用户必须输入用户名和密码来完成，如果没有该选项请参考 <a target="_blank" rel="noopener" href="https://kukusun.github.io/2022/10/21/13-netplwiz%E6%97%A0%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/">“netplwiz无自动登录选项”</a> 进行设置。</p>
  
       <!-- reward -->
       
@@ -200,7 +200,7 @@
       <li>
         Copyrights &copy;
         2023
-        <i class="ri-heart-fill heart_icon"></i> K-_-SUN
+        <i class="ri-heart-fill heart_icon"></i> kukusun
       </li>
     </ul>
     <ul>

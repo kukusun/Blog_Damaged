@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>25.升级Windows版本的命令(适用Win11&amp;Win10) |  K-_-SUN的博客</title>
+      <title>25.升级Windows版本的命令(适用Win11&amp;Win10) |  K的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -102,7 +102,7 @@
        
   <p>方法一：<br>使用Dism来升级，命令如下。暂未成功过，需持续研究。<br>Dism升级的微软官网链接:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options">https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Get-CurrentEdition</span><br><span class="line">#获取当前版本</span><br><span class="line"></span><br><span class="line">Dism /online /Get-TargetEditions</span><br><span class="line">#获取可以升级的版本</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Professional /ProductKey:VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#升级到专业版</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Enterprise /ProductKey:XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#升级到企业版</span><br></pre></td></tr></table></figure>
-<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击<a target="_blank" rel="noopener" href="https://ksun-76.github.io/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/">“Windows升级降级版本的明细表”</a></p>
+<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击<a target="_blank" rel="noopener" href="https://kukusun.github.io/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/">“Windows升级降级版本的明细表”</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">changepk.exe /ProductKey YTMG3-N6DKC-DKB77-7M9GH-8HVX7</span><br><span class="line">#家庭版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#专业版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#企业版</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
@@ -198,7 +198,7 @@
       <li>
         Copyrights &copy;
         2023
-        <i class="ri-heart-fill heart_icon"></i> K-_-SUN
+        <i class="ri-heart-fill heart_icon"></i> kukusun
       </li>
     </ul>
     <ul>
