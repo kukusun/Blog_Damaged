@@ -99,7 +99,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/15/26-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6(%E5%A4%B9)%E7%9A%84%E5%88%9B%E5%BB%BA%E4%BF%AE%E6%94%B9%E6%97%A5%E6%9C%9F/"
+  <a class="article-title" href="/posts/83b82704.html"
     >26.修改文件(夹)的创建修改日期</a> 
 </h2>
  
@@ -108,7 +108,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/15/26-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6(%E5%A4%B9)%E7%9A%84%E5%88%9B%E5%BB%BA%E4%BF%AE%E6%94%B9%E6%97%A5%E6%9C%9F/" class="article-date">
+      <a href="/posts/83b82704.html" class="article-date">
   <time datetime="2022-11-14T16:03:00.000Z" itemprop="datePublished">2022-11-15</time>
 </a>    
     </div>
@@ -149,7 +149,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/15/25-%E5%8D%87%E7%BA%A7Windows%E7%89%88%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4(%E9%80%82%E7%94%A8Win11&Win10)/"
+  <a class="article-title" href="/posts/50231575.html"
     >25.升级Windows版本的命令(适用Win11&amp;Win10)</a> 
 </h2>
  
@@ -158,16 +158,16 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/15/25-%E5%8D%87%E7%BA%A7Windows%E7%89%88%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4(%E9%80%82%E7%94%A8Win11&Win10)/" class="article-date">
+      <a href="/posts/50231575.html" class="article-date">
   <time datetime="2022-11-14T16:02:00.000Z" itemprop="datePublished">2022-11-15</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>方法一：<br>使用Dism来升级，命令如下。暂未成功过，需持续研究。<br>Dism升级的微软官网链接:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options">https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options</a></p>
+  <p>方法一：<br>使用Dism来升级，命令如下。暂未成功过，需持续研究。<br>Dism升级方式的微软官网链接:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options">https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Get-CurrentEdition</span><br><span class="line">#获取当前版本</span><br><span class="line"></span><br><span class="line">Dism /online /Get-TargetEditions</span><br><span class="line">#获取可以升级的版本</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Professional /ProductKey:VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#升级到专业版</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Enterprise /ProductKey:XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#升级到企业版</span><br></pre></td></tr></table></figure>
-<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击<a target="_blank" rel="noopener" href="https://kukusun.github.io/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/">“Windows升级降级版本的明细表”</a></p>
+<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击 <a href="/posts/148739fa.html" title="24.Windows升级降级版本的明细表">“Windows升级降级版本的明细表”</a> 查询</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">changepk.exe /ProductKey YTMG3-N6DKC-DKB77-7M9GH-8HVX7</span><br><span class="line">#家庭版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#专业版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#企业版</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
@@ -201,7 +201,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/"
+  <a class="article-title" href="/posts/148739fa.html"
     >24.Windows升级降级版本的明细表</a> 
 </h2>
  
@@ -210,7 +210,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/" class="article-date">
+      <a href="/posts/148739fa.html" class="article-date">
   <time datetime="2022-11-14T16:01:00.000Z" itemprop="datePublished">2022-11-15</time>
 </a>    
     </div>
@@ -232,128 +232,128 @@
 </thead>
 <tbody><tr>
 <td align="left">家庭版&gt;专业版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
 </tr>
 <tr>
 <td align="left">家庭版&gt;专业工作站版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
 </tr>
 <tr>
 <td align="left">家庭版&gt;专业教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">家庭版&gt;教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业版&gt;专业工作站版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
 </tr>
 <tr>
 <td align="left">专业版&gt;专业教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业版&gt;教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业版&gt;企业版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业工作站版&gt;专业教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业工作站版&gt;教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业工作站版&gt;企业版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业教育版&gt;教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">企业版&gt;教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png">(适用于企业的 Microsoft Store)</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 </tbody></table>
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png" title="不支持"></th>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png" title="支持，需重新启动"></th>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png" title="支持，无需重新启动"></th>
+<th align="center"><img src="/posts/148739fa/x_blk.png" title="不支持"></th>
+<th align="center"><img src="/posts/148739fa/check_grn.png" title="支持，需重新启动"></th>
+<th align="center"><img src="/posts/148739fa/check_blu.png" title="支持，无需重新启动"></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -377,81 +377,81 @@
 </thead>
 <tbody><tr>
 <td align="left">家庭版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业工作站版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">专业教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">教育版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
 </tr>
 <tr>
 <td align="left">企业版 LTSC</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
 </tr>
 <tr>
 <td align="left">企业版</td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png"></td>
-<td align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
 </tr>
 </tbody></table>
 <table>
 <thead>
 <tr>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/x_blk.png" title="不支持"></th>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_grn.png" title="支持"></th>
-<th align="center"><img src="/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/check_blu.png" title="不被视为降级或升级"></th>
+<th align="center"><img src="/posts/148739fa/x_blk.png" title="不支持"></th>
+<th align="center"><img src="/posts/148739fa/check_grn.png" title="支持"></th>
+<th align="center"><img src="/posts/148739fa/check_blu.png" title="不被视为降级或升级"></th>
 </tr>
 </thead>
 <tbody><tr>
@@ -493,7 +493,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/13/23-%E6%B8%85%E7%90%86%20WinSxS%20%E6%96%87%E4%BB%B6%E5%A4%B9/"
+  <a class="article-title" href="/posts/639910d8.html"
     >23.清理 WinSxS 文件夹</a> 
 </h2>
  
@@ -502,7 +502,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/13/23-%E6%B8%85%E7%90%86%20WinSxS%20%E6%96%87%E4%BB%B6%E5%A4%B9/" class="article-date">
+      <a href="/posts/639910d8.html" class="article-date">
   <time datetime="2022-11-12T16:04:00.000Z" itemprop="datePublished">2022-11-13</time>
 </a>    
     </div>
@@ -543,7 +543,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/13/22-%E5%AE%89%E8%A3%85Microsoft%20Visual%20C++%20Redistributable/"
+  <a class="article-title" href="/posts/991f594f.html"
     >22.安装Microsoft Visual C++ Redistributable</a> 
 </h2>
  
@@ -552,7 +552,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/13/22-%E5%AE%89%E8%A3%85Microsoft%20Visual%20C++%20Redistributable/" class="article-date">
+      <a href="/posts/991f594f.html" class="article-date">
   <time datetime="2022-11-12T16:03:00.000Z" itemprop="datePublished">2022-11-13</time>
 </a>    
     </div>
@@ -593,7 +593,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/13/21-%E6%8A%8ACMD%E8%AE%BE%E7%BD%AE%E4%B8%BA%E8%8B%B1%E6%96%87%E6%98%BE%E7%A4%BA/"
+  <a class="article-title" href="/posts/df200f8d.html"
     >21.把CMD设置为英文显示</a> 
 </h2>
  
@@ -602,7 +602,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/13/21-%E6%8A%8ACMD%E8%AE%BE%E7%BD%AE%E4%B8%BA%E8%8B%B1%E6%96%87%E6%98%BE%E7%A4%BA/" class="article-date">
+      <a href="/posts/df200f8d.html" class="article-date">
   <time datetime="2022-11-12T16:02:00.000Z" itemprop="datePublished">2022-11-13</time>
 </a>    
     </div>
@@ -643,7 +643,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/13/20-%E9%81%8D%E5%8E%86%E5%A4%8D%E5%88%B6%E6%89%80%E6%9C%89%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6/"
+  <a class="article-title" href="/posts/4015c911.html"
     >20.遍历复制所有特定文件</a> 
 </h2>
  
@@ -652,7 +652,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/13/20-%E9%81%8D%E5%8E%86%E5%A4%8D%E5%88%B6%E6%89%80%E6%9C%89%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6/" class="article-date">
+      <a href="/posts/4015c911.html" class="article-date">
   <time datetime="2022-11-12T16:01:00.000Z" itemprop="datePublished">2022-11-13</time>
 </a>    
     </div>
@@ -692,7 +692,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/12/19-Windows%E4%B8%8EOffice%E7%9A%84GVLK%E6%BF%80%E6%B4%BBKey/"
+  <a class="article-title" href="/posts/c4c33cbd.html"
     >19.Windows与Office的GVLK激活Key</a> 
 </h2>
  
@@ -701,7 +701,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/12/19-Windows%E4%B8%8EOffice%E7%9A%84GVLK%E6%BF%80%E6%B4%BBKey/" class="article-date">
+      <a href="/posts/c4c33cbd.html" class="article-date">
   <time datetime="2022-11-11T16:04:00.000Z" itemprop="datePublished">2022-11-12</time>
 </a>    
     </div>
@@ -1227,7 +1227,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/12/18-%E4%B8%BAWindows%E5%AE%89%E8%A3%85Office2021ProPlus/"
+  <a class="article-title" href="/posts/f21abdc6.html"
     >18.为Windows安装Office2021ProPlus</a> 
 </h2>
  
@@ -1236,7 +1236,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/12/18-%E4%B8%BAWindows%E5%AE%89%E8%A3%85Office2021ProPlus/" class="article-date">
+      <a href="/posts/f21abdc6.html" class="article-date">
   <time datetime="2022-11-11T16:03:00.000Z" itemprop="datePublished">2022-11-12</time>
 </a>    
     </div>
@@ -1286,7 +1286,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/11/12/17-slmgr.vbs%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%B9%B6%E6%BF%80%E6%B4%BBWindows/"
+  <a class="article-title" href="/posts/dad1a352.html"
     >17.slmgr.vbs命令行中显示并激活Windows</a> 
 </h2>
  
@@ -1295,7 +1295,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/11/12/17-slmgr.vbs%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%B9%B6%E6%BF%80%E6%B4%BBWindows/" class="article-date">
+      <a href="/posts/dad1a352.html" class="article-date">
   <time datetime="2022-11-11T16:02:00.000Z" itemprop="datePublished">2022-11-12</time>
 </a>    
     </div>
