@@ -122,7 +122,7 @@
       <link href="/2023/02/03/40-%E5%8D%B8%E8%BD%BDWin11%E5%B0%8F%E7%BB%84%E4%BB%B6/"/>
       <url>/2023/02/03/40-%E5%8D%B8%E8%BD%BDWin11%E5%B0%8F%E7%BB%84%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget uninstall &quot;Windows Web Experience Pack&quot;</span><br></pre></td></tr></table></figure><p>WinGet其它详细用法请参考：<a href="https://kukusun.github.io/2023/02/03/39-WinGet%E5%91%BD%E4%BB%A4%E8%AF%A6%E6%83%85/">“WinGet命令详情”</a></p>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget uninstall &quot;Windows Web Experience Pack&quot;</span><br></pre></td></tr></table></figure><p>WinGet其它详细用法请参考：<a href="../39-WinGet%E5%91%BD%E4%BB%A4%E8%AF%A6%E6%83%85">“WinGet命令详情”</a>测试1</p>]]></content>
       
       
       
