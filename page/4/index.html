@@ -88,6 +88,62 @@
     
     
     <article
+  id="post-15-重新启用Microsoft Office旧版共享工作簿"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/21/15-%E9%87%8D%E6%96%B0%E5%90%AF%E7%94%A8Microsoft%20Office%E6%97%A7%E7%89%88%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E7%B0%BF/"
+    >15.重新启用Microsoft Office旧版共享工作簿</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/21/15-%E9%87%8D%E6%96%B0%E5%90%AF%E7%94%A8Microsoft%20Office%E6%97%A7%E7%89%88%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E7%B0%BF/" class="article-date">
+  <time datetime="2022-10-20T16:06:00.000Z" itemprop="datePublished">2022-10-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>向快速访问工具栏添加共享工作簿按钮<br>1.单击“文件”&gt;“选项”&gt;“快速访问工具栏”。<br>2.打开“从下列位置选择命令”下的列表，选择“所有命令”。<br>3.向下滚动该列表，直至看到“共享工作簿(旧版)”。 选择该项，然后单击“添加”。<br>4.然后滚动列表，直至看到“修订(旧版)”。 选择该项，然后单击“添加”。<br>5.滚动列表，直至看到“保护共享(旧版)”。 选择该项，然后单击“添加”。<br>6.滚动列表，直至看到“比较和合并工作簿”。 选择该项，然后单击“添加”。<br>7.单击“确定”。<br>8.现在，Excel 窗口顶部将出现四个新按钮。<br></p>
+<ul>
+<li>“共享工作簿”按钮</li>
+<li>“修订”按钮</li>
+<li>“保护和共享”按钮</li>
+<li>“比较和合并工作簿”按钮</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Office/" rel="tag">Office</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-14-Windows开机自动登录账户"
   class="article article-type-post"
   itemscope
@@ -518,59 +574,6 @@
        
   <p>创建以下bat文件并运行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;Addgpedit.txt</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;Addgpedit.txt</span><br><span class="line">for /f %%i in (&#x27;findstr /i . Addgpedit.txt 2^&gt;nul&#x27;) do Dism /online /NoRestart /Add-Package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-05-为Windows添加右键文件校验"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/"
-    >05.为Windows添加右键文件校验</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/" class="article-date">
-  <time datetime="2022-10-16T16:05:00.000Z" itemprop="datePublished">2022-10-17</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p>添加删除校验的Bat压缩包：<a href="/download/05/%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C.zip">点此下载</a></p>
-<p>添加单个校验项请运行“右键文件校验 - 单个.bat”<br>添加多个校验项请运行“右键文件校验 - 多个.bat”<br>只需临时校验则直接拖动需校验文件到“文件校验 - 拖放.bat”上松开<br>删除右键菜单校验项可运行“删除右键文件校验项.bat”，或直接在CMD中运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br></pre></td></tr></table></figure>
-<h1 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h1><p>如需替换单个校验项的校验类型则将“右键文件校验 - 单个.bat”中第9行的SHA256改为你想要的校验类型<br>如需向多个校验项中添加更多的校验项则复制01menu然后按照下图上的详细说明粘贴修改<br><img src="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/%E7%A4%BA%E4%BE%8B.png" alt="添加多校验项示例" title="添加多校验项示例"></p>
- 
       <!-- reward -->
       
     </div>

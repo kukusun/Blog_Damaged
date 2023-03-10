@@ -88,6 +88,59 @@
     
     
     <article
+  id="post-05-为Windows添加右键文件校验"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/"
+    >05.为Windows添加右键文件校验</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/" class="article-date">
+  <time datetime="2022-10-16T16:05:00.000Z" itemprop="datePublished">2022-10-17</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p>添加删除校验的Bat压缩包：<a href="/download/05/%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C.zip">点此下载</a></p>
+<p>添加单个校验项请运行 “右键文件校验 - 单个.bat”<br>添加多个校验项请运行 “右键文件校验 - 多个.bat”<br>只需临时校验则直接拖动需校验文件到 “文件校验 - 拖放.bat” 上松开<br>删除右键菜单校验项可运行 “删除右键文件校验项.bat” 或直接在CMD中运行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br></pre></td></tr></table></figure>
+<h1 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h1><p>如需替换单个校验项的校验类型则将“右键文件校验 - 单个.bat”中第9行的SHA256改为你想要的校验类型<br>如需向多个校验项中添加更多的校验项则复制01menu然后按照下图上的详细说明粘贴修改<br><img src="/2022/10/17/05-%E4%B8%BAWindows%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C/%E7%A4%BA%E4%BE%8B.png" alt="添加多校验项示例" title="添加多校验项示例"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-04-离线安装.Net FrameWork 3.5"
   class="article article-type-post"
   itemscope

@@ -88,6 +88,58 @@
     
     
     <article
+  id="post-25-升级Windows版本的命令(适用Win11&amp;Win10)"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/11/15/25-%E5%8D%87%E7%BA%A7Windows%E7%89%88%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4(%E9%80%82%E7%94%A8Win11&Win10)/"
+    >25.升级Windows版本的命令(适用Win11&amp;Win10)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/11/15/25-%E5%8D%87%E7%BA%A7Windows%E7%89%88%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4(%E9%80%82%E7%94%A8Win11&Win10)/" class="article-date">
+  <time datetime="2022-11-14T16:02:00.000Z" itemprop="datePublished">2022-11-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>方法一：<br>使用Dism来升级，命令如下。暂未成功过，需持续研究。<br>Dism升级的微软官网链接:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options">https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Get-CurrentEdition</span><br><span class="line">#获取当前版本</span><br><span class="line"></span><br><span class="line">Dism /online /Get-TargetEditions</span><br><span class="line">#获取可以升级的版本</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Professional /ProductKey:VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#升级到专业版</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Enterprise /ProductKey:XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#升级到企业版</span><br></pre></td></tr></table></figure>
+<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击<a target="_blank" rel="noopener" href="https://kukusun.github.io/2022/11/15/24-Windows%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%98%8E%E7%BB%86%E8%A1%A8/">“Windows升级降级版本的明细表”</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">changepk.exe /ProductKey YTMG3-N6DKC-DKB77-7M9GH-8HVX7</span><br><span class="line">#家庭版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#专业版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#企业版</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-24-Windows升级降级版本的明细表"
   class="article article-type-post"
   itemscope
@@ -1261,62 +1313,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-15-重新启用Microsoft Office旧版共享工作簿"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/10/21/15-%E9%87%8D%E6%96%B0%E5%90%AF%E7%94%A8Microsoft%20Office%E6%97%A7%E7%89%88%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E7%B0%BF/"
-    >15.重新启用Microsoft Office旧版共享工作簿</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/10/21/15-%E9%87%8D%E6%96%B0%E5%90%AF%E7%94%A8Microsoft%20Office%E6%97%A7%E7%89%88%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E7%B0%BF/" class="article-date">
-  <time datetime="2022-10-20T16:06:00.000Z" itemprop="datePublished">2022-10-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>向快速访问工具栏添加共享工作簿按钮<br>1.单击“文件”&gt;“选项”&gt;“快速访问工具栏”。<br>2.打开“从下列位置选择命令”下的列表，选择“所有命令”。<br>3.向下滚动该列表，直至看到“共享工作簿(旧版)”。 选择该项，然后单击“添加”。<br>4.然后滚动列表，直至看到“修订(旧版)”。 选择该项，然后单击“添加”。<br>5.滚动列表，直至看到“保护共享(旧版)”。 选择该项，然后单击“添加”。<br>6.滚动列表，直至看到“比较和合并工作簿”。 选择该项，然后单击“添加”。<br>7.单击“确定”。<br>8.现在，Excel 窗口顶部将出现四个新按钮。<br></p>
-<ul>
-<li>“共享工作簿”按钮</li>
-<li>“修订”按钮</li>
-<li>“保护和共享”按钮</li>
-<li>“比较和合并工作簿”按钮</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Office/" rel="tag">Office</a></li></ul>
 
     </footer>
   </div>
