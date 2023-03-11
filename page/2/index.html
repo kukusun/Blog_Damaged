@@ -497,55 +497,6 @@
 
     
     <article
-  id="post-01-模板"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/83dcefb7.html"
-    >1</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/83dcefb7.html" class="article-date">
-  <time datetime="2022-12-31T16:00:00.000Z" itemprop="datePublished">2023-01-01</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-   
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tags/" rel="tag">tags</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
   id="post-32-ESD提取转换WIM"
   class="article article-type-post"
   itemscope
@@ -574,6 +525,56 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询ESD的信息</span><br><span class="line">Dism /Get-WimInfo /WimFile:&quot;C:\Users\administrator\Desktop\install.esd&quot;</span><br><span class="line"></span><br><span class="line">提取转换为wim，注意SourceIndex要对应ESD中查询到的对应镜像ID</span><br><span class="line">Dism /Export-Image /SourceImageFile:&quot;C:\Users\administrator\Desktop\install.esd&quot; /SourceIndex:5 /DestinationImageFile:&quot;C:\Users\administrator\Desktop\install.wim&quot; /Compress:Max /CheckIntegrity</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-31-Windows安装助手升级与镜像下载位置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/e4cf31d0.html"
+    >31.Windows安装助手升级与镜像下载位置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/e4cf31d0.html" class="article-date">
+  <time datetime="2022-11-17T16:01:00.000Z" itemprop="datePublished">2022-11-18</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>安装助手如果检测配置兼容性不通过，则让程序以Win7兼容性启动方可继续升级<br>下载完成后如需提取ESD系统镜像文件，则保存地址如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\administrator\AppData\Local\Temp</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
