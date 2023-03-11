@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title>50.为微软拼音添加时间输出</title>
+      <link href="/posts/ca9b5ae.html"/>
+      <url>/posts/ca9b5ae.html</url>
+      
+        <content type="html"><![CDATA[<p>为微软拼音添加自定义短语,格式也可以自己替换，下面只展示两种自用的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</span><br><span class="line">%yyyy%年%MM%月%dd%日 %HH%点%mm%分%ss%秒</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>49.Win10时钟显示秒</title>
+      <link href="/posts/2dee8536.html"/>
+      <url>/posts/2dee8536.html</url>
+      
+        <content type="html"><![CDATA[<p>Win10时钟显示秒的Bat压缩包：<a href="/download/49/Win10%E6%97%B6%E9%92%9F%E6%98%BE%E7%A4%BA%E7%A7%92.zip">点此下载</a></p><p>打开压缩包后，运行 “Win10时钟显示秒.bat” 就可以让系统时钟显示秒<br>如需取消显示秒则运行 “取消-Win10时钟显示秒.bat”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>48.去除桌面图标小箭头和盾牌</title>
+      <link href="/posts/2e634d72.html"/>
+      <url>/posts/2e634d72.html</url>
+      
+        <content type="html"><![CDATA[<p>去除桌面图标小箭头和盾牌的Bat压缩包：<a href="/download/48/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87%E5%B0%8F%E7%AE%AD%E5%A4%B4%E5%92%8C%E7%9B%BE%E7%89%8C.zip">点此下载</a></p><p>打开压缩包后，运行 “去除桌面图标小箭头和盾牌.bat” 就可以将小箭头盾牌隐藏<br>重新显示小箭头盾牌可运行 “恢复桌面图标小箭头和盾牌.bat”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>47.wushowhide.diagcab下载</title>
+      <link href="/posts/7d200b26.html"/>
+      <url>/posts/7d200b26.html</url>
+      
+        <content type="html"><![CDATA[<p>wushowhide.diagcab可以用来屏蔽部分更新<br>微软官方：<a href="https://download.microsoft.com/download/F/2/2/F22D5FDB-59CD-4275-8C95-1BE17BF70B21/wushowhide.diagcab">点此下载</a><br>本地下载：<a href="/download/47/wushowhide.diagcab">点此下载</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>46.Win11右键改回经典样式</title>
       <link href="/posts/2c73f433.html"/>
       <url>/posts/2c73f433.html</url>
@@ -270,6 +346,25 @@
         <tags>
             
             <tag> IPTV </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1</title>
+      <link href="/posts/83dcefb7.html"/>
+      <url>/posts/83dcefb7.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> tags </tag>
             
         </tags>
       
