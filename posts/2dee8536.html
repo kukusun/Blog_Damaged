@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">59</span>
+            <span class="post-count">83</span>
         </span>
     </span>
 
@@ -100,9 +100,11 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Win10时钟显示秒的Bat压缩包：<a href="/download/49/Win10%E6%97%B6%E9%92%9F%E6%98%BE%E7%A4%BA%E7%A7%92.zip">点此下载</a></p>
-<p>打开压缩包后，运行 “Win10时钟显示秒.bat” 就可以让系统时钟显示秒<br>如需取消显示秒则运行 “取消-Win10时钟显示秒.bat”</p>
- 
+  <p>cmd中执行下面的命令即可。</p>
+<p>打开Win10时钟的秒显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /t REG_DWORD /d 1 /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
+<p>关闭Win10时钟的秒显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
