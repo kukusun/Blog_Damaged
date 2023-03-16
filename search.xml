@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>55.使用CMD命令查看Windows已保存Wifi的密码</title>
+      <link href="/posts/11573e00.html"/>
+      <url>/posts/11573e00.html</url>
+      
+        <content type="html"><![CDATA[<p>查询已保存的所有Wifi名称：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show profile</span><br></pre></td></tr></table></figure><p>根据名称显示密码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan show profile name=&quot;名称&quot; key=clear</span><br></pre></td></tr></table></figure><p>显示出来的内容中密码显示在 “安全设置” –&gt; “关键内容” 行</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>54.为Windows右键添加复制到移动到选项</title>
+      <link href="/posts/4521a203.html"/>
+      <url>/posts/4521a203.html</url>
+      
+        <content type="html"><![CDATA[<p>添加命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo&quot; /ve /t REG_SZ /d &quot;&#123;C2FBB630-2971-11d1-A18C-00C04FD75D13&#125;&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo&quot; /ve /t REG_SZ /d &quot;&#123;C2FBB631-2971-11d1-A18C-00C04FD75D13&#125;&quot; /f</span><br></pre></td></tr></table></figure><p>删除命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo&quot; /f &amp; reg delete &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo&quot; /f</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>53.Windows下安装Apache</title>
       <link href="/posts/9247e11.html"/>
       <url>/posts/9247e11.html</url>

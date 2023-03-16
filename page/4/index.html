@@ -88,6 +88,350 @@
     
     
     <article
+  id="post-25-升级Windows版本的命令(适用Win11&amp;Win10)"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/50231575.html"
+    >25.升级Windows版本的命令(适用Win11&amp;Win10)</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/50231575.html" class="article-date">
+  <time datetime="2022-11-14T16:02:00.000Z" itemprop="datePublished">2022-11-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>方法一：<br>使用Dism来升级，命令如下。暂未成功过，需持续研究。<br>Dism升级方式的微软官网链接:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options">https://learn.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/dism-windows-edition-servicing-command-line-options</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Get-CurrentEdition</span><br><span class="line">#获取当前版本</span><br><span class="line"></span><br><span class="line">Dism /online /Get-TargetEditions</span><br><span class="line">#获取可以升级的版本</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Professional /ProductKey:VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#升级到专业版</span><br><span class="line"></span><br><span class="line">Dism /online /Set-Edition:Enterprise /ProductKey:XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#升级到企业版</span><br></pre></td></tr></table></figure>
+<p>方法二：<br>用changepk.exe的ProductKey选项来改变Windows的当前Key。该方法等同于手动输入产品密钥使用该方法升级需要注意是否支持版本升级，如果不支持执行完成不会发生任何版本变化，具体支持情况请点击 <a href="/posts/148739fa.html" title="24.Windows升级降级版本的明细表">“Windows升级降级版本的明细表”</a> 查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">changepk.exe /ProductKey YTMG3-N6DKC-DKB77-7M9GH-8HVX7</span><br><span class="line">#家庭版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br><span class="line">#专业版</span><br><span class="line"></span><br><span class="line">changepk.exe /ProductKey XGVPP-NMH47-7TTHJ-W3FW7-8HV2C</span><br><span class="line">#企业版</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-24-Windows升级降级版本的明细表"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/148739fa.html"
+    >24.Windows升级降级版本的明细表</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/148739fa.html" class="article-date">
+  <time datetime="2022-11-14T16:01:00.000Z" itemprop="datePublished">2022-11-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>微软官方网站：<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/deployment/upgrade/windows-10-edition-upgrades">https://learn.microsoft.com/zh-cn/windows/deployment/upgrade/windows-10-edition-upgrades</a></p>
+<h1 id="升级详情"><a href="#升级详情" class="headerlink" title="升级详情"></a>升级详情</h1><table>
+<thead>
+<tr>
+<th align="left">版本</th>
+<th align="center">使用移动设备管理<br>(MDM)</th>
+<th align="center">使用预<br>配包</th>
+<th align="center">使用命令<br>行工具</th>
+<th align="center">使用适用于企业的<br>Microsoft Store或电脑</th>
+<th align="center">手动输入<br>产品密钥</th>
+<th align="center">从Microsoft Store购<br>买许可证</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">家庭版&gt;专业版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+</tr>
+<tr>
+<td align="left">家庭版&gt;专业工作站版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+</tr>
+<tr>
+<td align="left">家庭版&gt;专业教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">家庭版&gt;教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业版&gt;专业工作站版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+</tr>
+<tr>
+<td align="left">专业版&gt;专业教育版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业版&gt;教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业版&gt;企业版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业工作站版&gt;专业教育版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业工作站版&gt;教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业工作站版&gt;企业版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png">(1703 – 电脑)<br>(1709 – 适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业教育版&gt;教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">企业版&gt;教育版</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png">(适用于企业的 Microsoft Store)</td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="/posts/148739fa/x_blk.png" title="不支持"></th>
+<th align="center"><img src="/posts/148739fa/check_grn.png" title="支持，需重新启动"></th>
+<th align="center"><img src="/posts/148739fa/check_blu.png" title="支持，无需重新启动"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">不支持</td>
+<td align="center">支持<br>需重新启动</td>
+<td align="center">支持<br>无需重新启动</td>
+</tr>
+</tbody></table>
+<h1 id="降级详情"><a href="#降级详情" class="headerlink" title="降级详情"></a>降级详情</h1><table>
+<thead>
+<tr>
+<th align="left">版本</th>
+<th align="center">家庭版</th>
+<th align="center">专业版</th>
+<th align="center">专业工作站版</th>
+<th align="center">专业教育版</th>
+<th align="center">教育版</th>
+<th align="center">企业版 LTSC</th>
+<th align="center">企业版</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">家庭版</td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业工作站版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">专业教育版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">教育版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+</tr>
+<tr>
+<td align="left">企业版 LTSC</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+</tr>
+<tr>
+<td align="left">企业版</td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_grn.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+<td align="center"><img src="/posts/148739fa/x_blk.png"></td>
+<td align="center"><img src="/posts/148739fa/check_blu.png"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"><img src="/posts/148739fa/x_blk.png" title="不支持"></th>
+<th align="center"><img src="/posts/148739fa/check_grn.png" title="支持"></th>
+<th align="center"><img src="/posts/148739fa/check_blu.png" title="不被视为降级或升级"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">不支持</td>
+<td align="center">支持</td>
+<td align="center">不被视为<br>降级或升级</td>
+</tr>
+</tbody></table>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-23-清理WinSxS文件夹"
   class="article article-type-post"
   itemscope
@@ -959,116 +1303,6 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">%ALLUSERSPROFILE%</span><br><span class="line">C:\ProgramData</span><br><span class="line"></span><br><span class="line">%APPDATA%</span><br><span class="line">C:\Users\admin\AppData\Roaming</span><br><span class="line"></span><br><span class="line">%COMMONPROGRAMFILES%</span><br><span class="line">C:\Program Files\Common Files</span><br><span class="line"></span><br><span class="line">%COMMONPROGRAMFILES(x86)%</span><br><span class="line">C:\Program Files (x86)\Common Files</span><br><span class="line"></span><br><span class="line">%COMSPEC%</span><br><span class="line">C:\Windows\system32\cmd.exe</span><br><span class="line"></span><br><span class="line">%HOMEDRIVE%和%SystemDrive%</span><br><span class="line">C:</span><br><span class="line"></span><br><span class="line">%HOMEPATH%</span><br><span class="line">(C:)\Users\admin</span><br><span class="line"></span><br><span class="line">%LOCALAPPDATA%</span><br><span class="line">C:\Users\admin\AppData\Local</span><br><span class="line"></span><br><span class="line">%PROGRAMDATA%</span><br><span class="line">C:\ProgramData</span><br><span class="line"></span><br><span class="line">%PROGRAMFILES%</span><br><span class="line">C:\Program Files</span><br><span class="line"></span><br><span class="line">%PROGRAMFILES(X86)%</span><br><span class="line">C:\Program Files (x86)</span><br><span class="line"></span><br><span class="line">%PUBLIC%</span><br><span class="line">C:\Users\Public</span><br><span class="line"></span><br><span class="line">%SystemRoot%</span><br><span class="line">C:\Windows</span><br><span class="line"></span><br><span class="line">%TEMP%和%TMP%</span><br><span class="line">C:\Users\admin\AppData\Local\Temp</span><br><span class="line"></span><br><span class="line">%USERPROFILE%</span><br><span class="line">C:\Users\admin</span><br><span class="line"></span><br><span class="line">%WINDIR%</span><br><span class="line">C:\Windows</span><br><span class="line"></span><br><span class="line">%SystemRoot%\Resources </span><br><span class="line">#Windows主题目录C:\Windows\Resources</span><br><span class="line"></span><br><span class="line">%SystemRoot%\Web\Wallpaper</span><br><span class="line">#Windows自带的壁纸目录C:\Windows\Web\Wallpaper</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-15-重新启用Microsoft Office旧版共享工作簿"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/41cf4f5a.html"
-    >15.重新启用Microsoft Office旧版共享工作簿</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/41cf4f5a.html" class="article-date">
-  <time datetime="2022-10-20T16:06:00.000Z" itemprop="datePublished">2022-10-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>向快速访问工具栏添加共享工作簿按钮<br>1.单击“文件”&gt;“选项”&gt;“快速访问工具栏”。<br>2.打开“从下列位置选择命令”下的列表，选择“所有命令”。<br>3.向下滚动该列表，直至看到“共享工作簿(旧版)”。 选择该项，然后单击“添加”。<br>4.然后滚动列表，直至看到“修订(旧版)”。 选择该项，然后单击“添加”。<br>5.滚动列表，直至看到“保护共享(旧版)”。 选择该项，然后单击“添加”。<br>6.滚动列表，直至看到“比较和合并工作簿”。 选择该项，然后单击“添加”。<br>7.单击“确定”。<br>8.现在，Excel 窗口顶部将出现四个新按钮。<br></p>
-<ul>
-<li>“共享工作簿”按钮</li>
-<li>“修订”按钮</li>
-<li>“保护和共享”按钮</li>
-<li>“比较和合并工作簿”按钮</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Office/" rel="tag">Office</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-14-Windows开机自动登录账户"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/9f6ce3a.html"
-    >14.Windows开机自动登录账户</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/9f6ce3a.html" class="article-date">
-  <time datetime="2022-10-20T16:05:00.000Z" itemprop="datePublished">2022-10-21</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>使Windows开机自动登录有两种方法</p>
-<p>方法一：<br>添加注册表。此方式为明文密码，方法二更安全，建议优先使用方法二。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v AutoAdminLogon /t REG_SZ /d 1 /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultUserName /t REG_SZ /d administrator /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultPassword /t REG_SZ /d 123456 /f</span><br></pre></td></tr></table></figure>
-<p>方法二：</p>
-<p>使用netplwiz中取消勾选用户必须输入用户名和密码来完成，如果没有该选项请参考 <a href="/posts/3a420a88.html" title="13.netplwiz无自动登录选项">"netplwiz无自动登录选项"</a> 进行设置。</p>
- 
       <!-- reward -->
       
     </div>
