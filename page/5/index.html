@@ -88,6 +88,66 @@
     
     
     <article
+  id="post-17-slmgr.vbs部分常用命令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/dad1a352.html"
+    >17.slmgr.vbs部分常用命令</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/dad1a352.html" class="article-date">
+  <time datetime="2022-11-11T16:02:00.000Z" itemprop="datePublished">2022-11-12</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>安装Windows密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H</span><br></pre></td></tr></table></figure>
+<p>卸载Windows密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -upk</span><br></pre></td></tr></table></figure>
+<p>设置与清除KMS服务器地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -skms 192.168.100.220</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ckms</span><br></pre></td></tr></table></figure>
+<p>激活Windows：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ato</span><br></pre></td></tr></table></figure>
+<p>显示当前激活的详细信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -dlv</span><br></pre></td></tr></table></figure>
+<p>查询激活有效期：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -xpr</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-16-常见环境变量对应系统文件路径"
   class="article article-type-post"
   itemscope
@@ -521,58 +581,6 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters&quot; /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-07-用cmdkey添加远程桌面权限"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/55ba276a.html"
-    >07.用cmdkey添加远程桌面权限</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/55ba276a.html" class="article-date">
-  <time datetime="2022-10-18T16:00:00.000Z" itemprop="datePublished">2022-10-19</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>添加命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmdkey /generic:TERMSRV/192.168.1.2 /user:administrator /pass:123456</span><br></pre></td></tr></table></figure>
-<p>删除命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmdkey /delete:TERMSRV/192.168.1.2</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>

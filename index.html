@@ -88,6 +88,66 @@
     
     
     <article
+  id="post-57-Office的OSPP.vbs常用命令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/22057c83.html"
+    >57.Office的OSPP.vbs常用命令</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/22057c83.html" class="article-date">
+  <time datetime="2023-03-19T13:12:15.000Z" itemprop="datePublished">2023-03-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>安装Office密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH</span><br></pre></td></tr></table></figure>
+<p>卸载Office密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /unpkey:6F7TH</span><br></pre></td></tr></table></figure>
+<p>设置与清除KMS服务器地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /sethst:192.168.100.220</span><br><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /remhst</span><br></pre></td></tr></table></figure>
+<p>激活Office：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /act</span><br></pre></td></tr></table></figure>
+<p>查询激活有效期（仅KMS激活有具体剩余天数）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /dstatus</span><br></pre></td></tr></table></figure>
+<p>安装VOL许可证（根据版本更改xrm-ms对应文件名即可）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /inslic:&quot;%PROGRAMFILES%\Microsoft Office\root\Licenses16\ProPlus2021VL_KMS_Client_AE-ppd.xrm-ms&quot;</span><br><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /inslic:&quot;%PROGRAMFILES%\Microsoft Office\root\Licenses16\ProPlus2021VL_KMS_Client_AE-ul.xrm-ms&quot;</span><br><span class="line">cscript &quot;%PROGRAMFILES%\Microsoft Office\Office16\OSPP.vbs&quot; /inslic:&quot;%PROGRAMFILES%\Microsoft Office\root\Licenses16\ProPlus2021VL_KMS_Client_AE-ul-oob.xrm-ms&quot;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Office/" rel="tag">Office</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-56-激活工具汇总"
   class="article article-type-post"
   itemscope
@@ -541,59 +601,10 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>去除桌面图标小箭头和盾牌的Bat压缩包：<a href="/download/48/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87%E5%B0%8F%E7%AE%AD%E5%A4%B4%E5%92%8C%E7%9B%BE%E7%89%8C.zip">点此下载</a></p>
-<p>打开压缩包后，运行 “去除桌面图标小箭头和盾牌.bat” 就可以将小箭头盾牌隐藏<br>重新显示小箭头盾牌可运行 “恢复桌面图标小箭头和盾牌.bat”</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-47-wushowhide.diagcab下载"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/7d200b26.html"
-    >47.wushowhide.diagcab下载</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/7d200b26.html" class="article-date">
-  <time datetime="2023-03-11T05:40:47.000Z" itemprop="datePublished">2023-03-11</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>wushowhide.diagcab可以用来屏蔽部分更新<br>微软官方：<a target="_blank" rel="noopener" href="https://download.microsoft.com/download/F/2/2/F22D5FDB-59CD-4275-8C95-1BE17BF70B21/wushowhide.diagcab">点此下载</a><br>本地下载：<a href="/download/47/wushowhide.diagcab">点此下载</a></p>
- 
+  <p>去除桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 77 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
+<p>重新显示桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>

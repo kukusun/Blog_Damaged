@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>17.slmgr.vbs命令行中显示并激活Windows |  K的博客</title>
+      <title>17.slmgr.vbs部分常用命令 |  K的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-17-slmgr.vbs命令行中显示并激活Windows"
+  id="post-17-slmgr.vbs部分常用命令"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  17.slmgr.vbs命令行中显示并激活Windows
+  17.slmgr.vbs部分常用命令
 </h1>
  
 
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">61</span>
+            <span class="post-count">92</span>
         </span>
     </span>
 
@@ -100,8 +100,18 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>用cscript来运行slmgr.vbs，可以不弹窗显示消息，bat命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">echo -----------------------------------------------------</span><br><span class="line">echo.</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H</span><br><span class="line">echo -----------------------------------------------------</span><br><span class="line">echo.</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -skms 192.168.100.220</span><br><span class="line">echo -----------------------------------------------------</span><br><span class="line">echo.</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ato</span><br><span class="line">echo -----------------------------------------------------</span><br><span class="line">echo.</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -xpr</span><br><span class="line">echo -----------------------------------------------------</span><br><span class="line">pause</span><br></pre></td></tr></table></figure> 
+  <p>安装Windows密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H</span><br></pre></td></tr></table></figure>
+<p>卸载Windows密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -upk</span><br></pre></td></tr></table></figure>
+<p>设置与清除KMS服务器地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -skms 192.168.100.220</span><br><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ckms</span><br></pre></td></tr></table></figure>
+<p>激活Windows：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -ato</span><br></pre></td></tr></table></figure>
+<p>显示当前激活的详细信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -dlv</span><br></pre></td></tr></table></figure>
+<p>查询激活有效期：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript %SystemRoot%\System32\slmgr.vbs -xpr</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>

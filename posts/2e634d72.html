@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">78</span>
+            <span class="post-count">160</span>
         </span>
     </span>
 
@@ -100,9 +100,10 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>去除桌面图标小箭头和盾牌的Bat压缩包：<a href="/download/48/%E5%8E%BB%E9%99%A4%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87%E5%B0%8F%E7%AE%AD%E5%A4%B4%E5%92%8C%E7%9B%BE%E7%89%8C.zip">点此下载</a></p>
-<p>打开压缩包后，运行 “去除桌面图标小箭头和盾牌.bat” 就可以将小箭头盾牌隐藏<br>重新显示小箭头盾牌可运行 “恢复桌面图标小箭头和盾牌.bat”</p>
- 
+  <p>去除桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 77 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
+<p>重新显示桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
