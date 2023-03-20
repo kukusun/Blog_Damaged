@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">82</span>
+            <span class="post-count">384</span>
         </span>
     </span>
 
@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -100,8 +100,9 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>添加右键切换电源计划的Bat压缩包：<a href="/download/45/%E5%8F%B3%E9%94%AE%E5%88%87%E6%8D%A2%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92.zip">点此下载</a></p>
-<p>打开压缩包后，运行 “添加右键切换电源计划.bat” 就可以完成添加<br>删除可运行 “删除右键切换电源计划.bat” 或直接在CMD中运行以下命令</p>
+  <p>添加切换电源计划选项在CMD运行下列命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /v Icon /t REG_SZ /d powercpl.dll /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /v MUIVerb /t REG_SZ /d 切换电源计划 /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /v Position /t REG_SZ /d Bottom /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /v SubCommands /t REG_SZ /d &quot;&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\01menu&quot; /v Icon /t REG_SZ /d powercpl.dll /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\01menu&quot; /v MUIVerb /t REG_SZ /d 节能 /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\01menu\Command&quot; /ve /t REG_SZ /d &quot;powercfg /setactive a1841308-3541-4fab-bc81-f71556f20b4a&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\02menu&quot; /v Icon /t REG_SZ /d powercpl.dll /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\02menu&quot; /v MUIVerb /t REG_SZ /d 平衡 /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\02menu\Command&quot; /ve /t REG_SZ /d &quot;powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\03menu&quot; /v Icon /t REG_SZ /d powercpl.dll /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\03menu&quot; /v MUIVerb /t REG_SZ /d 高性能 /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\03menu\Command&quot; /ve /t REG_SZ /d &quot;powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\04menu&quot; /v Icon /t REG_SZ /d powercpl.dll /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\04menu&quot; /v MUIVerb /t REG_SZ /d 卓越性能 /f &amp; reg add &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan\Shell\04menu\Command&quot; /ve /t REG_SZ /d &quot;powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61&quot; /f</span><br></pre></td></tr></table></figure>
+<p>删除切换电源计划选项在CMD运行下列命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CLASSES_ROOT\DesktopBackground\shell\SwitchPowerPlan&quot; /f</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
