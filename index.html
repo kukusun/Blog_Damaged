@@ -88,6 +88,69 @@
     
     
     <article
+  id="post-58-用Hexo制作个人博客"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/e467cfc4.html"
+    >58.用Hexo制作个人博客</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/e467cfc4.html" class="article-date">
+  <time datetime="2023-08-19T14:19:39.000Z" itemprop="datePublished">2023-08-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>Hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br><br>Hexo主题Ayer：<a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer/">https://github.com/Shen-Yu/hexo-theme-ayer/</a><br><br>Git官网：<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a><br><br>Node.js官网：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a><br></p>
+<h1 id="1-安装Git和Node-js"><a href="#1-安装Git和Node-js" class="headerlink" title="1.安装Git和Node.js"></a>1.安装Git和Node.js</h1><p>访问Git官网和Node.js官网，Git下载64位版本即可，Node.js下载长期维护版(LTS)，如无特殊需求，两个组件均一直按下一步按照默认的安装就可以。<br><br>桌面右键菜单有Git选项就是安装成功。在CMD中输入node -v如果有显示版本号则Node.js也安装成功</p>
+<h1 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h1><p>先新建一个文件夹，进入新建的文件夹中选择右键菜单的Git Bash Here，在出现的Git窗口中文件路径会显示为刚才新建文件夹的路径。接着依次输入下面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>命令执行完成后访问Git窗口中出现的网址(localhost:port)即可浏览刚刚创建好的博客网站</p>
+<h1 id="3-添加一篇文章"><a href="#3-添加一篇文章" class="headerlink" title="3.添加一篇文章"></a>3.添加一篇文章</h1><p>在blog文件夹中选择右键菜单的Git Bash Here，输入下面的命令创建新文章</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章的标题&quot;</span><br></pre></td></tr></table></figure>
+<p>创建好的文章在blog –&gt; source –&gt; _posts文件夹中，文章为Markdown文件</p>
+<h1 id="4-生成文章的网页文件"><a href="#4-生成文章的网页文件" class="headerlink" title="4.生成文章的网页文件"></a>4.生成文章的网页文件</h1><p>输入下面的命令，将新文章的md文件生成为网页文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>如需查看用hexo s命令</p>
+<h1 id="5-更换Hexo的主题-非必要步骤"><a href="#5-更换Hexo的主题-非必要步骤" class="headerlink" title="5.更换Hexo的主题(非必要步骤)"></a>5.更换Hexo的主题(非必要步骤)</h1><p>这里以Ayer主题为例子，别的主题请参考对应说明文件<br><br>Ayer主题使用说明：<a target="_blank" rel="noopener" href="https://shen-yu.gitee.io/2019/ayer/">https://shen-yu.gitee.io/2019/ayer/</a><br><br><br>1.进入blog文件夹并选择右键菜单的Git Bash Here输入下面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
+<p>执行完成后blog –&gt; themes文件夹中会出现ayer文件夹，ayer文件夹存放了该主题的所有文件<br><br>2.修改blog文件夹下的_config.yml，将theme的值改为主题文件名(theme: ayer)<br><br>3.使用hexo g和hexo s查看更换主题后的网页样式</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-57-Office的OSPP.vbs常用命令"
   class="article article-type-post"
   itemscope
@@ -553,58 +616,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /t REG_DWORD /d 1 /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
 <p>关闭Win10时钟的秒显示</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-48-去除桌面图标小箭头和盾牌"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/2e634d72.html"
-    >48.去除桌面图标小箭头和盾牌</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/2e634d72.html" class="article-date">
-  <time datetime="2023-03-11T06:22:39.000Z" itemprop="datePublished">2023-03-11</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>去除桌面图标小箭头和盾牌请运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 77 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
-<p>重新显示桌面图标小箭头和盾牌请运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
