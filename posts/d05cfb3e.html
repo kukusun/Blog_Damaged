@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">98</span>
+            <span class="post-count">94</span>
         </span>
     </span>
 
@@ -102,8 +102,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="方法一：用PowerShell命令的方式修改"><a href="#方法一：用PowerShell命令的方式修改" class="headerlink" title="方法一：用PowerShell命令的方式修改"></a>方法一：用PowerShell命令的方式修改</h1><p>比较安全，但修改仅局限于当前连接的网络</p>
-<p>获取网络连接信息</p>
+  <h1 id="方法一：用PowerShell命令的方式修改-比较安全，仅限于当前连接的网络"><a href="#方法一：用PowerShell命令的方式修改-比较安全，仅限于当前连接的网络" class="headerlink" title="方法一：用PowerShell命令的方式修改(比较安全，仅限于当前连接的网络)"></a>方法一：用PowerShell命令的方式修改(比较安全，仅限于当前连接的网络)</h1><p>获取网络连接信息</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-NetConnectionProfile</span><br></pre></td></tr></table></figure>
 <p>设置为专用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-NetConnectionProfile -Name 网络 -NetworkCategory Private</span><br></pre></td></tr></table></figure>
