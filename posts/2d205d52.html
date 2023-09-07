@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">132</span>
+            <span class="post-count">131</span>
         </span>
     </span>
 
@@ -101,7 +101,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line">Dism /online /Disable-Feature /FeatureName:NetFX3</span><br><span class="line">Dism /online /Enable-Feature /FeatureName:NetFX3 /Source:%~dp0 /NoRestart</span><br></pre></td></tr></table></figure>
-<p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭.Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录<br>Note:Net FrameWork 3.5的cab文件为Win10&#x2F;Win11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p>
+<p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录<br>Note:Net FrameWork 3.5的cab文件为Win10&#x2F;Win11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p>
  
       <!-- reward -->
       
