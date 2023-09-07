@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">144</span>
+            <span class="post-count">145</span>
         </span>
     </span>
 
@@ -103,8 +103,7 @@
   <p>使Windows开机自动登录有两种方法</p>
 <p>方法一：<br>添加注册表。此方式为明文密码，方法二更安全，建议优先使用方法二。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v AutoAdminLogon /t REG_SZ /d 1 /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultUserName /t REG_SZ /d administrator /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon&quot; /v DefaultPassword /t REG_SZ /d 123456 /f</span><br></pre></td></tr></table></figure>
-<p>方法二：</p>
-<p>使用netplwiz中取消勾选用户必须输入用户名和密码来完成，如果没有该选项请参考 <a href="/posts/3a420a88.html" title="13.netplwiz无自动登录选项">"netplwiz无自动登录选项"</a> 进行设置。</p>
+<p>方法二1：<br>使用netplwiz中取消勾选用户必须输入用户名和密码来完成，如果没有该选项请参考 <a href="/posts/3a420a88.html" title="13.netplwiz无自动登录选项">"netplwiz无自动登录选项"</a> 进行设置。</p>
  
       <!-- reward -->
       
