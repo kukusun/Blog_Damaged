@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>58.用Hexo制作个人博客 |  K的博客</title>
+      <title>59.为Hexo启用图片功能 |  K的博客</title>
   <meta name="generator" content="hexo-theme-ayer">
        
 <link rel="stylesheet" href="/dist/main.css">
@@ -51,7 +51,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-58-用Hexo制作个人博客"
+  id="post-59-为Hexo启用图片功能"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -62,7 +62,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  58.用Hexo制作个人博客
+  59.为Hexo启用图片功能
 </h1>
  
 
@@ -70,15 +70,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/posts/e467cfc4.html" class="article-date">
-  <time datetime="2023-08-19T14:19:39.000Z" itemprop="datePublished">2023-08-19</time>
+      <a href="/posts/184c279a.html" class="article-date">
+  <time datetime="2098-12-31T16:00:00.000Z" itemprop="datePublished">2099-01-01</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">510</span>
+            <span class="post-count">487</span>
         </span>
     </span>
 
@@ -94,30 +94,18 @@
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br>Hexo主题Ayer：<a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer/">https://github.com/Shen-Yu/hexo-theme-ayer/</a><br>Git官网：<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a><br>Node.js官网：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
-<h1 id="1-安装Git和Node-js"><a href="#1-安装Git和Node-js" class="headerlink" title="1.安装Git和Node.js"></a>1.安装Git和Node.js</h1><p>访问Git官网和Node.js官网，Git下载64位版本即可，Node.js下载长期维护版(LTS)，如无特殊需求，两个组件均一直按下一步按照默认的安装就可以。<br>桌面右键菜单有Git选项就是安装成功。在CMD中输入node -v如果有显示版本号则Node.js也安装成功</p>
-<h1 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h1><p>先新建一个文件夹，进入新建的文件夹中选择右键菜单的Git Bash Here，在出现的Git窗口中文件路径会显示为刚才新建文件夹的路径。接着依次输入下面的命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>命令执行完成后访问Git窗口中出现的网址(localhost:port)即可浏览刚刚创建好的博客网站</p>
-<h1 id="3-添加一篇文章"><a href="#3-添加一篇文章" class="headerlink" title="3.添加一篇文章"></a>3.添加一篇文章</h1><p>在blog文件夹中选择右键菜单的Git Bash Here，输入下面的命令创建新文章</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章的标题&quot;</span><br></pre></td></tr></table></figure>
-<p>创建好的文章在blog –&gt; source –&gt; _posts文件夹中，文章为Markdown文件</p>
-<h1 id="4-生成文章的网页文件"><a href="#4-生成文章的网页文件" class="headerlink" title="4.生成文章的网页文件"></a>4.生成文章的网页文件</h1><p>输入下面的命令，将新文章的md文件生成为网页文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>如需查看用hexo s命令</p>
-<h1 id="5-更换Hexo的主题-非必要步骤"><a href="#5-更换Hexo的主题-非必要步骤" class="headerlink" title="5.更换Hexo的主题(非必要步骤)"></a>5.更换Hexo的主题(非必要步骤)</h1><p>这里以Ayer主题为例子，别的主题请参考对应说明文件<br>Ayer主题使用说明：<a target="_blank" rel="noopener" href="https://shen-yu.gitee.io/2019/ayer/">https://shen-yu.gitee.io/2019/ayer/</a></p>
-<p>1.进入blog文件夹并选择右键菜单的Git Bash Here输入下面的命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure>
-<p>执行完成后blog –&gt; themes文件夹中会出现ayer文件夹，ayer文件夹存放了该主题的所有文件<br>2.修改blog文件夹下的_config.yml，将theme的值改为主题文件名(theme: ayer)<br>3.使用hexo g和hexo s查看更换主题后的网页样式</p>
- 
+  <p>1.修改blog文件夹下的_config.yml里的post_asset_folder: false为post_asset_folder: true<br>2.为hexo添加hexo-asset-image插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>修改blog –&gt; node_modules –&gt; hexo-asset-image –&gt; index.js为以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&#x27;use strict&#x27;;</span><br><span class="line">var cheerio = require(&#x27;cheerio&#x27;);</span><br><span class="line"></span><br><span class="line">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(&#x27;after_post_render&#x27;, function(data)&#123;</span><br><span class="line">  var config = hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">    var link = data.permalink;</span><br><span class="line">    var beginPos = getPosition(link, &#x27;/&#x27;, 3) + 1;</span><br><span class="line">    var appendLink = &#x27;&#x27;;</span><br><span class="line">    // In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;.../about/index.html&quot;.</span><br><span class="line">    // if not with index.html endpos = link.lastIndexOf(&#x27;.&#x27;) + 1 support hexo-abbrlink</span><br><span class="line">    if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">      // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">      // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">      appendLink = &#x27;index/&#x27;;</span><br><span class="line">      var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">      var endPos = link.length-1;</span><br><span class="line">    &#125;</span><br><span class="line">    link = link.substring(beginPos, endPos) + &#x27;/&#x27; + appendLink;</span><br><span class="line"></span><br><span class="line">    var toprocess = [&#x27;excerpt&#x27;, &#x27;more&#x27;, &#x27;content&#x27;];</span><br><span class="line">    for(var i = 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key = toprocess[i];</span><br><span class="line"></span><br><span class="line">      var $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#x27;img&#x27;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#x27;src&#x27;))&#123;</span><br><span class="line">          // For windows style path, we replace &#x27;\&#x27; to &#x27;/&#x27;.</span><br><span class="line">          var src = $(this).attr(&#x27;src&#x27;).replace(&#x27;\\&#x27;, &#x27;/&#x27;);</span><br><span class="line">          if(!(/http[s]*.*|\/\/.*/.test(src)</span><br><span class="line">            || /^\s+\//.test(src)</span><br><span class="line">            || /^\s*\/uploads|images\//.test(src))) &#123;</span><br><span class="line">            // For &quot;about&quot; page, the first part of &quot;src&quot; can&#x27;t be removed.</span><br><span class="line">            // In addition, to support multi-level local directory.</span><br><span class="line">            var linkArray = link.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">              return elem != &#x27;&#x27;;</span><br><span class="line">            &#125;);</span><br><span class="line">            var srcArray = src.split(&#x27;/&#x27;).filter(function(elem)&#123;</span><br><span class="line">              return elem != &#x27;&#x27; &amp;&amp; elem != &#x27;.&#x27;;</span><br><span class="line">            &#125;);</span><br><span class="line">            if(srcArray.length &gt; 1)</span><br><span class="line">            srcArray.shift();</span><br><span class="line">            src = srcArray.join(&#x27;/&#x27;);</span><br><span class="line"></span><br><span class="line">            $(this).attr(&#x27;src&#x27;, config.root + link + src);</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">          console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">          console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>3.把图片放入blog –&gt; source –&gt; _posts的文章同名文件夹下<br>4.添加图片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用方法</span><br><span class="line">![你想输入的替代文字](xxxx/图片名.jpg)</span><br><span class="line">举例：</span><br><span class="line">![](53-Windows%E4%B8%8B%E5%AE%89%E8%A3%85Apache/53-1.png &quot;&quot;)</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -169,7 +157,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/posts/e467cfc4.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/posts/184c279a.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -182,19 +170,19 @@
    
   <nav class="article-nav">
     
-      <a href="/posts/184c279a.html" class="article-nav-link">
+      <a href="/posts/f7408e45.html" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            59.为Hexo启用图片功能
+            60.为Hexo启用文章搜索功能
           
         </div>
       </a>
     
     
-      <a href="/posts/22057c83.html" class="article-nav-link">
+      <a href="/posts/e467cfc4.html" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">57.Office的OSPP.vbs常用命令</div>
+        <div class="article-nav-title">58.用Hexo制作个人博客</div>
       </a>
     
   </nav>
