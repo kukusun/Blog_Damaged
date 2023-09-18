@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>63.将Hexo推送至Github Page</title>
+      <link href="/posts/e0632775.html"/>
+      <url>/posts/e0632775.html</url>
+      
+        <content type="html"><![CDATA[<p>1.安装hexo-deployer-git插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>2.修改blog文件夹下的_config.yml<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/kukusun/kukusun.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>3.推送至Github Page<br>在自己的GitHub帐号中创建一个repository，名称为：用户名.github.io<br>设置git的邮箱与名称，以前设置过就无需再次设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure><p>用命令推送：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><p>此时可能需要设置GitHub帐号的登陆，可以直接登录，也可以用token方式推送Blog<br>如果选择用token方式则<a href="https://github.com/settings/tokens">点击此处</a>跳转token管理界面<br>token创建步骤</p><ul><li>右上角Generate new token处选择Generate new token (classic)</li><li>Note写入自定义的名称</li><li>Expiration设置过期时间</li><li>Select scopes中将repo栏中的选项全部勾选</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>62.为Hexo文章生成永久固定链接</title>
+      <link href="/posts/716af117.html"/>
+      <url>/posts/716af117.html</url>
+      
+        <content type="html"><![CDATA[<p>1.安装hexo-abbrlink插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>2.修改blog文件夹下的_config.yml<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32   #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex     #进制： dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>3.修改blog –&gt; node_modules –&gt; hexo-asset-image文件夹下的index.js<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处访问</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>61.为Hexo启用文章加密</title>
+      <link href="/posts/691f5b25.html"/>
+      <url>/posts/691f5b25.html</url>
+      
+        <content type="html"><![CDATA[<p>1.安装hexo-blog-encrypt插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure><p>2.修改配置文件<br>修改blog文件夹下的_config.yml，追加以下内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo-blog-encrypt</span><br><span class="line">encrypt: </span><br><span class="line">  abstract: 该文章已加密，请输入密码后查看</span><br><span class="line">  message: 请在此处输入密码</span><br><span class="line">  wrong_pass_message: 密码不太对哦，请重新输入！</span><br></pre></td></tr></table></figure><p>abstract为主页显示的加密提示语<br>message为密码输入框的提示语<br>wrong_pass_message密码输入错误的提示语<br>3.修改blog –&gt; node_modules –&gt; hexo-blog-encrypt –&gt; lib文件夹下的hbe.js(非必要步骤)<br>修改前</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;Encrypt again&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure><p>修改后</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;重新进行加密&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure><p>4.在需要加密的文章头部添加password选项</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>60.为Hexo启用文章搜索功能</title>
       <link href="/posts/f7408e45.html"/>
       <url>/posts/f7408e45.html</url>

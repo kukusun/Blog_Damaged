@@ -88,6 +88,190 @@
     
     
     <article
+  id="post-63-将Hexo推送至Github Page"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/e0632775.html"
+    >63.将Hexo推送至Github Page</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/e0632775.html" class="article-date">
+  <time datetime="2023-09-18T16:03:00.000Z" itemprop="datePublished">2023-09-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>1.安装hexo-deployer-git插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>2.修改blog文件夹下的_config.yml<br>修改前：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/kukusun/kukusun.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>3.推送至Github Page<br>在自己的GitHub帐号中创建一个repository，名称为：用户名.github.io<br>设置git的邮箱与名称，以前设置过就无需再次设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
+<p>用命令推送：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>此时可能需要设置GitHub帐号的登陆，可以直接登录，也可以用token方式推送Blog<br>如果选择用token方式则<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">点击此处</a>跳转token管理界面<br>token创建步骤</p>
+<ul>
+<li>右上角Generate new token处选择Generate new token (classic)</li>
+<li>Note写入自定义的名称</li>
+<li>Expiration设置过期时间</li>
+<li>Select scopes中将repo栏中的选项全部勾选</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-62-为Hexo文章生成永久固定链接"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/716af117.html"
+    >62.为Hexo文章生成永久固定链接</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/716af117.html" class="article-date">
+  <time datetime="2023-09-18T16:02:00.000Z" itemprop="datePublished">2023-09-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>1.安装hexo-abbrlink插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>2.修改blog文件夹下的_config.yml<br>修改前：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32   #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex     #进制： dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+<p>3.修改blog –&gt; node_modules –&gt; hexo-asset-image文件夹下的index.js<br>修改前：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处访问</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-61-为Hexo启用文章加密"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/691f5b25.html"
+    >61.为Hexo启用文章加密</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/691f5b25.html" class="article-date">
+  <time datetime="2023-09-18T16:01:00.000Z" itemprop="datePublished">2023-09-19</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>1.安装hexo-blog-encrypt插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
+<p>2.修改配置文件<br>修改blog文件夹下的_config.yml，追加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo-blog-encrypt</span><br><span class="line">encrypt: </span><br><span class="line">  abstract: 该文章已加密，请输入密码后查看</span><br><span class="line">  message: 请在此处输入密码</span><br><span class="line">  wrong_pass_message: 密码不太对哦，请重新输入！</span><br></pre></td></tr></table></figure>
+<p>abstract为主页显示的加密提示语<br>message为密码输入框的提示语<br>wrong_pass_message密码输入错误的提示语<br>3.修改blog –&gt; node_modules –&gt; hexo-blog-encrypt –&gt; lib文件夹下的hbe.js(非必要步骤)<br>修改前</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;Encrypt again&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure>
+<p>修改后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;重新进行加密&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure>
+<p>4.在需要加密的文章头部添加password选项</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-60-为Hexo启用文章搜索功能"
   class="article article-type-post"
   itemscope
@@ -456,170 +640,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo&quot; /ve /t REG_SZ /d &quot;&#123;C2FBB630-2971-11d1-A18C-00C04FD75D13&#125;&quot; /f &amp; reg add &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo&quot; /ve /t REG_SZ /d &quot;&#123;C2FBB631-2971-11d1-A18C-00C04FD75D13&#125;&quot; /f</span><br></pre></td></tr></table></figure>
 <p>删除命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\CopyTo&quot; /f &amp; reg delete &quot;HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\MoveTo&quot; /f</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-53-Windows下安装Apache"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/9247e11.html"
-    >53.Windows下安装Apache</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/9247e11.html" class="article-date">
-  <time datetime="2023-03-14T15:32:08.000Z" itemprop="datePublished">2023-03-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="1-下载Apache"><a href="#1-下载Apache" class="headerlink" title="1.下载Apache"></a>1.下载Apache</h1><p>官网：<a target="_blank" rel="noopener" href="https://httpd.apache.org/">https://httpd.apache.org/</a><br><img src="/posts/9247e11/53-1.png"><br><img src="/posts/9247e11/53-2.png"><br><img src="/posts/9247e11/53-3.png"><br><img src="/posts/9247e11/53-4.png"></p>
-<h1 id="2-修改Apache配置文件"><a href="#2-修改Apache配置文件" class="headerlink" title="2.修改Apache配置文件"></a>2.修改Apache配置文件</h1><p>首先解压出来，修改conf文件夹下的httpd.conf文件<br><img src="/posts/9247e11/53-5.png"><br>找到Define SRVROOT “&#x2F;Apache24”将&#x2F;Apache24更改为解压后的目录<br><img src="/posts/9247e11/53-6.png"><br>如果端口已经被占用则修改Listen 80为别的未占用端口</p>
-<h1 id="3-安装Apache"><a href="#3-安装Apache" class="headerlink" title="3.安装Apache"></a>3.安装Apache</h1><p>打开cmd，cd到bin文件夹下。</p>
-<p>安装命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httpd -k install -n Apache &amp; net start Apache</span><br></pre></td></tr></table></figure>
-<p>卸载命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop Apache &amp; sc delete Apache</span><br></pre></td></tr></table></figure>
-<h1 id="4-访问测试"><a href="#4-访问测试" class="headerlink" title="4.访问测试"></a>4.访问测试</h1><p>在浏览器地址栏输入：<a target="_blank" rel="noopener" href="http://localhost/">http://localhost:80</a><br>出现下图界面，则为成功：<br><img src="/posts/9247e11/53-7.png"></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-52-关闭基于虚拟化的安全性(VBS)"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/4e0c0cae.html"
-    >52.关闭基于虚拟化的安全性(VBS)</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/4e0c0cae.html" class="article-date">
-  <time datetime="2023-03-13T16:29:12.000Z" itemprop="datePublished">2023-03-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>据说VBS最高可使系统损失30%性能，关闭可以提高性能，但安全性肯定会有降低，并且虚拟机和部分依靠虚拟机的功能可能无法正常使用。保持开启还是获得性能，自行决定，此文章只管贴出来命令</p>
-<h1 id="查询VBS状态"><a href="#查询VBS状态" class="headerlink" title="查询VBS状态"></a>查询VBS状态</h1><p>Off为关闭，Auto为开启</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for /f &quot;tokens=2&quot; %a in (&#x27;bcdedit^|findstr hypervisorlaunchtype&#x27;) do @echo. &amp; echo VBS的状态为：%a</span><br></pre></td></tr></table></figure>
-<h1 id="关闭命令"><a href="#关闭命令" class="headerlink" title="关闭命令"></a>关闭命令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
-<h1 id="开启命令"><a href="#开启命令" class="headerlink" title="开启命令"></a>开启命令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-51-Windows关闭开启“预留存储”空间"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/7aa82a6.html"
-    >51.Windows关闭开启“预留存储”空间</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/7aa82a6.html" class="article-date">
-  <time datetime="2023-03-13T13:33:52.000Z" itemprop="datePublished">2023-03-13</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>获取“预留存储”状态</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Get-ReservedStorageState</span><br></pre></td></tr></table></figure>
-<p>开启“预留存储”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Set-ReservedStorageState /State:Enabled</span><br></pre></td></tr></table></figure>
-<p>关闭“预留存储”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /online /Set-ReservedStorageState /State:Disabled</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
