@@ -4,6 +4,86 @@
   
     
     <entry>
+      <title>67.文件传输工具汇总</title>
+      <link href="/posts/d2726044.html"/>
+      <url>/posts/d2726044.html</url>
+      
+        <content type="html"><![CDATA[<p>1.snapdrop (仅限局域网)<br>局域网内的设备直接访问<a href="https://snapdrop.net/">官方网站</a>即可发现对方设备并进行局域网文件传输<br>如果需要搭建在本地使用可以参考官方GitHub项目的说明<br><a href="https://github.com/RobinLinus/snapdrop">点击此处</a>跳转至snapdrop的GitHub项目页</p><p>2.piping-server (貌似是通过服务器中转传输，可能速度比较慢)<br>访问<a href="https://piping-ui.org/">官方网站</a>，选择要上传的文件后双方输入同样的Secret path即可进行文件或文本传输<br><a href="https://github.com/nwtgck/piping-server">点击此处</a>跳转至piping-server的GitHub项目页</p><p>3.transfer (.zip域名，比较旧的浏览器可能无法正确访问)<br>访问<a href="https://transfer.zip/">官方网站</a>，选择文件点击send后会跳出二维码，扫码或复制访问链接即可进行文件传输<br><a href="https://github.com/robinkarlberg/transfer.zip-web">点击此处</a>跳转至transfer的GitHub项目页</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>66.Bat自动提权与检测</title>
+      <link href="/posts/e617b35a.html"/>
+      <url>/posts/e617b35a.html</url>
+      
+        <content type="html"><![CDATA[<p>Bat自动提权。在bat文件开头加入下面的命令则启动时会自动申请管理员权限</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br></pre></td></tr></table></figure><p>Bat管理员权限检测。下面命令加入到要检测的地方即可，如果仅检测无强制管理员要求，则改掉最后的exit命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>65.压缩VHD文件</title>
+      <link href="/posts/c2be5cd5.html"/>
+      <url>/posts/c2be5cd5.html</url>
+      
+        <content type="html"><![CDATA[<p>cmd给管理员权限，复制下面命令后替换vhd绝对路径即可压缩vhd文件为实际占用大小。目前仅测试过vhd没有测试过vhdx，但理论上来说应该没有区别</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>64.Hexo自用配置备份</title>
+      <link href="/posts/b8ba5ade.html"/>
+      <url>/posts/b8ba5ade.html</url>
+      
+        <content type="html"><![CDATA[<p>暂时仅做占位使用</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>63.将Hexo推送至Github Page</title>
       <link href="/posts/e0632775.html"/>
       <url>/posts/e0632775.html</url>
