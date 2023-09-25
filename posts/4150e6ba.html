@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">99</span>
+            <span class="post-count">100</span>
         </span>
     </span>
 
@@ -101,7 +101,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>创建以下bat文件并运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;Addgpedit.txt</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;Addgpedit.txt</span><br><span class="line">for /f %%i in (&#x27;findstr /i . Addgpedit.txt 2^&gt;nul&#x27;) do Dism /online /NoRestart /Add-Package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;Addgpedit.txt</span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;Addgpedit.txt</span><br><span class="line">for /f %%i in (&#x27;findstr /i . Addgpedit.txt 2^&gt;nul&#x27;) do Dism /online /NoRestart /Add-Package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
