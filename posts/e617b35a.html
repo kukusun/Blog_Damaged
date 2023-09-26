@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">137</span>
+            <span class="post-count">147</span>
         </span>
     </span>
 
@@ -103,7 +103,9 @@
   <p>Bat自动提权。在bat文件开头加入下面的命令则启动时会自动申请管理员权限</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br></pre></td></tr></table></figure>
 <p>Bat管理员权限检测。下面命令加入到要检测的地方即可，如果仅检测无强制管理员要求，则改掉最后的exit命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34541107">点击此处访问</a></p>
+ 
       <!-- reward -->
       
     </div>

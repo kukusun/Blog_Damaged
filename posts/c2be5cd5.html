@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">88</span>
+            <span class="post-count">98</span>
         </span>
     </span>
 
@@ -101,7 +101,9 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>cmd给管理员权限，复制下面命令后替换vhd绝对路径即可压缩vhd文件为实际占用大小。目前仅测试过vhd没有测试过vhdx，但理论上来说应该没有区别</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wutou/p/14302569.html">点击此处访问</a></p>
+ 
       <!-- reward -->
       
     </div>

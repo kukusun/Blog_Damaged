@@ -88,6 +88,111 @@
     
     
     <article
+  id="post-49-Win10时钟显示秒"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/2dee8536.html"
+    >49.Win10时钟显示秒</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/2dee8536.html" class="article-date">
+  <time datetime="2023-03-11T06:52:08.000Z" itemprop="datePublished">2023-03-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>cmd中执行下面的命令即可。</p>
+<p>打开Win10时钟的秒显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /t REG_DWORD /d 1 /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
+<p>关闭Win10时钟的秒显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced&quot; /v ShowSecondsInSystemClock /f &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-48-去除桌面图标小箭头和盾牌"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/2e634d72.html"
+    >48.去除桌面图标小箭头和盾牌</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/2e634d72.html" class="article-date">
+  <time datetime="2023-03-11T06:22:39.000Z" itemprop="datePublished">2023-03-11</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>去除桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 77 /t REG_SZ /d %windir%\system32\imageres.dll,197 /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure>
+<p>重新显示桌面图标小箭头和盾牌请运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM explorer.exe &amp; reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /f &amp; attrib -s -r -h %userprofile%\AppData\Local\iconcache.db &amp; del %userprofile%\AppData\Local\iconcache.db /f /q &amp; start %windir%\explorer.exe</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-47-wushowhide.diagcab下载"
   class="article article-type-post"
   itemscope
@@ -522,106 +627,6 @@
        
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget uninstall &quot;Windows Web Experience Pack&quot;</span><br></pre></td></tr></table></figure>
 <p>WinGet其它详细用法请参考：<a href="/posts/a7667b1c.html" title="39.WinGet命令详情">“WinGet命令详情”</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-39-WinGet命令详情"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/a7667b1c.html"
-    >39.WinGet命令详情</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/a7667b1c.html" class="article-date">
-  <time datetime="2023-02-02T16:01:00.000Z" itemprop="datePublished">2023-02-03</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">WinGet 命令行实用工具可从命令行安装应用程序和其他程序包。</span><br><span class="line"></span><br><span class="line">使用情况: winget [&lt;命令&gt;] [&lt;选项&gt;]</span><br><span class="line"></span><br><span class="line">下列命令有效:</span><br><span class="line">  install    安装给定的程序包</span><br><span class="line">  show       显示包的相关信息</span><br><span class="line">  source     管理程序包的来源</span><br><span class="line">  search     查找并显示程序包的基本信息</span><br><span class="line">  list       显示已安装的程序包</span><br><span class="line">  upgrade    显示并执行可用升级</span><br><span class="line">  uninstall  卸载给定的程序包</span><br><span class="line">  hash       哈希安装程序的帮助程序</span><br><span class="line">  validate   验证清单文件</span><br><span class="line">  settings   打开设置或设置管理员设置</span><br><span class="line">  features   显示实验性功能的状态</span><br><span class="line">  export     导出已安装程序包的列表</span><br><span class="line">  import     安装文件中的所有程序包</span><br><span class="line"></span><br><span class="line">如需特定命令的更多详细信息，请向其传递帮助参数。 [-?]</span><br><span class="line"></span><br><span class="line">下列选项可用：</span><br><span class="line">  -v,--version			显示工具的版本</span><br><span class="line">  --info			显示工具的常规信息</span><br><span class="line">  -?,--help			显示选定命令的帮助信息</span><br><span class="line">  --wait			提示用户在退出前按任意键</span><br><span class="line">  --verbose,--verbose-logs	启用 WinGet 的详细日志记录</span><br><span class="line">  --disable-interactivity	禁用交互式提示</span><br><span class="line"></span><br><span class="line">可在此找到更多帮助: &quot;https://aka.ms/winget-command-help&quot;</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-38-Windows组策略查询表"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/789f0c00.html"
-    >38.Windows组策略查询表</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/789f0c00.html" class="article-date">
-  <time datetime="2023-01-30T16:00:00.000Z" itemprop="datePublished">2023-01-31</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>官方网站：<br><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=25250">https://www.microsoft.com/en-us/download/details.aspx?id=25250</a></p>
-<p>如果官网已经删除，或网站加载不出来也可以<a href="download/38/Windows_PolicySettings.xlsx">点此下载</a></p>
  
       <!-- reward -->
       
