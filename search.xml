@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>70.Linux使用echo修改密码</title>
+      <link href="/posts/a3c2af9.html"/>
+      <url>/posts/a3c2af9.html</url>
+      
+        <content type="html"><![CDATA[<p>Centos:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo password | passwd --stdin username</span><br><span class="line">例子：echo &quot;123456&quot; | passwd --stdin root</span><br></pre></td></tr></table></figure><p>Ubuntu:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo username:password | chpasswd</span><br><span class="line">例子：echo root:123456 | chpasswd</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>69.关闭Windows搜索的网络搜索功能</title>
       <link href="/posts/ba804d4.html"/>
       <url>/posts/ba804d4.html</url>
       
-        <content type="html"><![CDATA[<p>Win10&#x2F;11搜索功能中会带有网络搜索，有时会影响搜索结果，在cmd执行下面命令可关闭该功能</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>Win10&#x2F;11搜索功能中会带有网络搜索，有时会影响搜索结果，在cmd执行下面命令可关闭该功能</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
@@ -27,7 +46,7 @@
       <link href="/posts/93a404b.html"/>
       <url>/posts/93a404b.html</url>
       
-        <content type="html"><![CDATA[<p>cmd输入下面命令将暂停时间设置为3000天，需要更改天数仅需修改3000为想要的时间即可，单位是天</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&quot; /v FlightSettingsMaxPauseDays /t reg_dword /d 3000 /f</span><br></pre></td></tr></table></figure><p>执行完后在Windows更新页面设置暂停时间即可</p>]]></content>
+        <content type="html"><![CDATA[<p>cmd输入下面命令将暂停时间设置为3000天，需要更改天数仅需修改3000为想要的时间即可，单位是天</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&quot; /v FlightSettingsMaxPauseDays /t REG_DWORD /d 3000 /f</span><br></pre></td></tr></table></figure><p>执行完后在Windows更新页面设置暂停时间即可</p>]]></content>
       
       
       
@@ -619,7 +638,7 @@
       <link href="/posts/789f0c00.html"/>
       <url>/posts/789f0c00.html</url>
       
-        <content type="html"><![CDATA[<p>官方网站：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=25250">点此访问</a><br>如果官网已经删除，或网站加载不出来也可以<a href="download/38/Windows_PolicySettings.xlsx">点此下载</a></p>]]></content>
+        <content type="html"><![CDATA[<p>官方网站：<a href="https://www.microsoft.com/en-us/download/details.aspx?id=25250">点此访问</a><br>如果官网已经删除或网站加载不出来也可以<a href="download/38/Windows_PolicySettings.xlsx">点此下载</a></p>]]></content>
       
       
       
@@ -817,7 +836,7 @@
       <link href="/posts/51cec15a.html"/>
       <url>/posts/51cec15a.html</url>
       
-        <content type="html"><![CDATA[<p>在OOBE出现时按下Shift+F10调出cmd，用cmd输入下方命令添加一个注册表，此时OOBE到设置网络时会出现一个我没有网络连接选项，点击即可跳过微软账号的登录注册，使用本地账号。<br>Note:操作过程不要连接网线或Wifi，否则将不能成功跳过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>在OOBE出现时按下Shift+F10调出cmd，用cmd输入下方命令添加一个注册表，此时OOBE到设置网络时会出现一个我没有网络连接选项，点击即可跳过微软账号的登录注册，使用本地账号。<br>Note:操作过程不要连接网线或Wifi，否则将不能成功跳过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE&quot; /v BypassNRO /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
@@ -1256,7 +1275,7 @@
       <link href="/posts/5ef0fa33.html"/>
       <url>/posts/5ef0fa33.html</url>
       
-        <content type="html"><![CDATA[<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p>添加删除校验的Bat压缩包：<a href="download/05/%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C.zip">点此下载</a></p><p>添加单个校验项请运行 “右键文件校验 - 单个.bat”<br>添加多个校验项请运行 “右键文件校验 - 多个.bat”<br>只需临时校验则直接拖动需校验文件到 “文件校验 - 拖放.bat” 上松开<br>删除右键菜单校验项可运行 “删除右键文件校验项.bat” 或直接在CMD中运行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete HKEY_CLASSES_ROOT\*\shell\FileHash /f</span><br></pre></td></tr></table></figure><h1 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h1><p>如需替换单个校验项的校验类型则将“右键文件校验 - 单个.bat”中第9行的SHA256改为你想要的校验类型<br>如需向多个校验项中添加更多的校验项则复制01menu然后按照下图上的详细说明粘贴修改<br><img src="/posts/5ef0fa33/%E7%A4%BA%E4%BE%8B.png" alt="添加多校验项示例" title="添加多校验项示例"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><p>添加删除校验的Bat压缩包：<a href="download/05/%E5%8F%B3%E9%94%AE%E6%96%87%E4%BB%B6%E6%A0%A1%E9%AA%8C.zip">点此下载</a></p><p>添加单个校验项请运行 “右键文件校验 - 单个.bat”<br>添加多个校验项请运行 “右键文件校验 - 多个.bat”<br>只需临时校验则直接拖动需校验文件到 “文件校验 - 拖放.bat” 上松开<br>删除右键菜单校验项可运行 “删除右键文件校验项.bat” 或直接在CMD中运行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKEY_CLASSES_ROOT\*\shell\FileHash&quot; /f</span><br></pre></td></tr></table></figure><h1 id="自定义修改"><a href="#自定义修改" class="headerlink" title="自定义修改"></a>自定义修改</h1><p>如需替换单个校验项的校验类型则将“右键文件校验 - 单个.bat”中第9行的SHA256改为你想要的校验类型<br>如需向多个校验项中添加更多的校验项则复制01menu然后按照下图上的详细说明粘贴修改<br><img src="/posts/5ef0fa33/%E7%A4%BA%E4%BE%8B.png" alt="添加多校验项示例" title="添加多校验项示例"></p>]]></content>
       
       
       

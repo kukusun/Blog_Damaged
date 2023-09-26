@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">106</span>
+            <span class="post-count">108</span>
         </span>
     </span>
 
@@ -101,7 +101,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在OOBE出现时按下Shift+F10调出cmd，用cmd输入下方命令添加一个注册表，此时OOBE到设置网络时会出现一个我没有网络连接选项，点击即可跳过微软账号的登录注册，使用本地账号。<br>Note:操作过程不要连接网线或Wifi，否则将不能成功跳过</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE&quot; /v BypassNRO /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>

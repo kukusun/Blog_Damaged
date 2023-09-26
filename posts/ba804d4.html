@@ -101,7 +101,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>Win10&#x2F;11搜索功能中会带有网络搜索，有时会影响搜索结果，在cmd执行下面命令可关闭该功能</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -165,6 +165,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/posts/a3c2af9.html" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            70.Linux使用echo修改密码
+          
+        </div>
+      </a>
     
     
       <a href="/posts/93a404b.html" class="article-nav-link">

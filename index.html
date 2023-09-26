@@ -88,6 +88,58 @@
     
     
     <article
+  id="post-70-Linux使用echo修改密码"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/a3c2af9.html"
+    >70.Linux使用echo修改密码</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/a3c2af9.html" class="article-date">
+  <time datetime="2023-09-26T05:22:58.000Z" itemprop="datePublished">2023-09-26</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>Centos:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo password | passwd --stdin username</span><br><span class="line">例子：echo &quot;123456&quot; | passwd --stdin root</span><br></pre></td></tr></table></figure>
+<p>Ubuntu:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo username:password | chpasswd</span><br><span class="line">例子：echo root:123456 | chpasswd</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-69-关闭Windows搜索的网络搜索功能"
   class="article article-type-post"
   itemscope
@@ -116,7 +168,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>Win10&#x2F;11搜索功能中会带有网络搜索，有时会影响搜索结果，在cmd执行下面命令可关闭该功能</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t reg_dword /d 1 /f</span><br></pre></td></tr></table></figure> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\explorer&quot; /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
     </div>
@@ -166,7 +218,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>cmd输入下面命令将暂停时间设置为3000天，需要更改天数仅需修改3000为想要的时间即可，单位是天</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&quot; /v FlightSettingsMaxPauseDays /t reg_dword /d 3000 /f</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&quot; /v FlightSettingsMaxPauseDays /t REG_DWORD /d 3000 /f</span><br></pre></td></tr></table></figure>
 <p>执行完后在Windows更新页面设置暂停时间即可</p>
  
       <!-- reward -->
@@ -584,65 +636,13 @@
 </article>
 
     
-    <article
-  id="post-60-为Hexo启用文章搜索功能"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/f7408e45.html"
-    >60.为Hexo启用文章搜索功能</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/f7408e45.html" class="article-date">
-  <time datetime="2023-09-14T15:50:00.000Z" itemprop="datePublished">2023-09-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>1.为hexo添加hexo-generator-search插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
-<p>2.修改配置文件<br>对blog文件夹下的_config.yml添加以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># hexo-generator-search</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>
