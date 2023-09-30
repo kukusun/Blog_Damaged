@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">298</span>
+            <span class="post-count">296</span>
         </span>
     </span>
 
@@ -110,7 +110,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>修改后：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处访问</a></p>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处</a></p>
  
       <!-- reward -->
       

@@ -88,6 +88,108 @@
     
     
     <article
+  id="post-72-设置浏览器插件白名单"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/d80606c0.html"
+    >72.设置浏览器插件白名单</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/d80606c0.html" class="article-date">
+  <time datetime="2023-09-30T10:15:47.000Z" itemprop="datePublished">2023-09-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>暂时留空不进行总结<br>参考出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-71-浏览器插件汇总"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/8abe9cdc.html"
+    >71.浏览器插件汇总</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/8abe9cdc.html" class="article-date">
+  <time datetime="2023-09-30T09:53:05.000Z" itemprop="datePublished">2023-09-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>1.Adblock Plus<br>屏蔽广告的浏览器插件，有收费会员版本，但免费版已经够用<br>官方网站：<a target="_blank" rel="noopener" href="https://adblockplus.org/zh_CN">点击此处</a></p>
+<p>2.Global Speed<br>调整视频速度的插件，可以倍速播放视频网站的广告来跳过广告<br>官方网站：<a target="_blank" rel="noopener" href="https://github.com/polywock/globalSpeed">点击此处</a></p>
+<p>3.SwitchyOmega<br>设置代理上网的插件，很久没更新了的样子<br>官方网站：<a target="_blank" rel="noopener" href="https://github.com/FelisCatus/SwitchyOmega">点击此处</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-70-Linux使用echo修改密码"
   class="article article-type-post"
   itemscope
@@ -327,7 +429,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br></pre></td></tr></table></figure>
 <p>Bat管理员权限检测。下面命令加入到要检测的地方即可，如果仅检测无强制管理员要求，则改掉最后的exit命令</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure>
-<p>参考出处：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34541107">点击此处访问</a></p>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34541107">点击此处</a></p>
  
       <!-- reward -->
       
@@ -379,7 +481,7 @@
        
   <p>cmd给管理员权限，复制下面命令后替换vhd绝对路径即可压缩vhd文件为实际占用大小。目前仅测试过vhd没有测试过vhdx，但理论上来说应该没有区别</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure>
-<p>参考出处：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wutou/p/14302569.html">点击此处访问</a></p>
+<p>参考出处：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wutou/p/14302569.html">点击此处</a></p>
  
       <!-- reward -->
       
@@ -499,124 +601,6 @@
 <li>Expiration设置过期时间</li>
 <li>Select scopes中将repo栏中的选项全部勾选</li>
 </ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-62-为Hexo文章生成永久固定链接"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/716af117.html"
-    >62.为Hexo文章生成永久固定链接</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/716af117.html" class="article-date">
-  <time datetime="2023-09-18T16:02:00.000Z" itemprop="datePublished">2023-09-19</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>1.安装hexo-abbrlink插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-<p>2.修改blog文件夹下的_config.yml<br>修改前：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32   #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex     #进制： dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-<p>3.修改blog –&gt; node_modules –&gt; hexo-asset-image文件夹下的index.js<br>修改前：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处访问</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-61-为Hexo启用文章加密"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/691f5b25.html"
-    >61.为Hexo启用文章加密</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/691f5b25.html" class="article-date">
-  <time datetime="2023-09-18T16:01:00.000Z" itemprop="datePublished">2023-09-19</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>1.安装hexo-blog-encrypt插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br></pre></td></tr></table></figure>
-<p>2.修改配置文件<br>修改blog文件夹下的_config.yml，追加以下内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># hexo-blog-encrypt</span><br><span class="line">encrypt: </span><br><span class="line">  abstract: 该文章已加密，请输入密码后查看</span><br><span class="line">  message: 请在此处输入密码</span><br><span class="line">  wrong_pass_message: 密码不太对哦，请重新输入！</span><br></pre></td></tr></table></figure>
-<p>abstract为主页显示的加密提示语<br>message为密码输入框的提示语<br>wrong_pass_message密码输入错误的提示语<br>3.修改blog –&gt; node_modules –&gt; hexo-blog-encrypt –&gt; lib文件夹下的hbe.js(非必要步骤)<br>修改前</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;Encrypt again&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure>
-<p>修改后</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const hideButton = document.createElement(&#x27;button&#x27;);</span><br><span class="line">hideButton.textContent = &#x27;重新进行加密&#x27;;</span><br><span class="line">hideButton.type = &#x27;button&#x27;;</span><br><span class="line">hideButton.classList.add(&quot;hbe-button&quot;);</span><br></pre></td></tr></table></figure>
-<p>4.在需要加密的文章头部添加password选项</p>
  
       <!-- reward -->
       

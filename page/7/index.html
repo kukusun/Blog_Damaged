@@ -88,6 +88,105 @@
     
     
     <article
+  id="post-12-Windows链路聚合设置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/48d9bdc7.html"
+    >12.Windows链路聚合设置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/48d9bdc7.html" class="article-date">
+  <time datetime="2022-10-20T16:03:00.000Z" itemprop="datePublished">2022-10-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PowerShell下运行</span><br><span class="line"></span><br><span class="line">添加：</span><br><span class="line">New-NetSwitchTeam -Name &quot;链路聚合&quot; -TeamMembers &quot;以太网&quot;,&quot;以太网 2&quot;</span><br><span class="line"></span><br><span class="line">删除：</span><br><span class="line">Remove-NetSwitchTeam -Name &quot;链路聚合&quot;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-11-修复Mstsc无法复制粘贴"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/6a083438.html"
+    >11.修复Mstsc无法复制粘贴</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/6a083438.html" class="article-date">
+  <time datetime="2022-10-20T16:02:00.000Z" itemprop="datePublished">2022-10-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>远程主机的rdpclip出了问题，执行下面命令重新启动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM rdpclip.exe &amp; start rdpclip.exe</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-10-Explorer命令行参数"
   class="article article-type-post"
   itemscope
@@ -481,112 +580,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-02-V2ray账号设置"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/f7e4e009.html"
-    >02.V2ray账号设置</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/f7e4e009.html" class="article-date">
-  <time datetime="2022-10-16T16:02:00.000Z" itemprop="datePublished">2022-10-17</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>根据截图，左单账号，右双账号(多账号同理)<br><img src="/posts/f7e4e009/V2ray%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE.png" alt="V2ray账号配置" title="V2ray账号配置"></p>
-<p>创建账号时uuid通过以下命令或通过V2rayN客户端点击生成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/sys/kernel/random/uuid</span><br></pre></td></tr></table></figure>
-<p>修改完成的配置文件覆盖保存至：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
-<p>生效需重启，命令为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart v2ray</span><br></pre></td></tr></table></figure> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-01-V2ray安装脚本"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/9f0a965d.html"
-    >01.V2ray安装脚本</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/9f0a965d.html" class="article-date">
-  <time datetime="2022-10-16T16:01:00.000Z" itemprop="datePublished">2022-10-17</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/233boy/v2ray</span><br><span class="line">一键安装脚本链接</span><br></pre></td></tr></table></figure>
-<p>如果节点连接质量不佳，安装中的协议建议选择kcp。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
 
     </footer>
   </div>

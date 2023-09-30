@@ -4,6 +4,46 @@
   
     
     <entry>
+      <title>72.设置浏览器插件白名单</title>
+      <link href="/posts/d80606c0.html"/>
+      <url>/posts/d80606c0.html</url>
+      
+        <content type="html"><![CDATA[<p>暂时留空不进行总结<br>参考出处：<a href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 浏览器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>71.浏览器插件汇总</title>
+      <link href="/posts/8abe9cdc.html"/>
+      <url>/posts/8abe9cdc.html</url>
+      
+        <content type="html"><![CDATA[<p>1.Adblock Plus<br>屏蔽广告的浏览器插件，有收费会员版本，但免费版已经够用<br>官方网站：<a href="https://adblockplus.org/zh_CN">点击此处</a></p><p>2.Global Speed<br>调整视频速度的插件，可以倍速播放视频网站的广告来跳过广告<br>官方网站：<a href="https://github.com/polywock/globalSpeed">点击此处</a></p><p>3.SwitchyOmega<br>设置代理上网的插件，很久没更新了的样子<br>官方网站：<a href="https://github.com/FelisCatus/SwitchyOmega">点击此处</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 浏览器 </tag>
+            
+            <tag> 软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>70.Linux使用echo修改密码</title>
       <link href="/posts/a3c2af9.html"/>
       <url>/posts/a3c2af9.html</url>
@@ -86,7 +126,7 @@
       <link href="/posts/e617b35a.html"/>
       <url>/posts/e617b35a.html</url>
       
-        <content type="html"><![CDATA[<p>Bat自动提权。在bat文件开头加入下面的命令则启动时会自动申请管理员权限</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br></pre></td></tr></table></figure><p>Bat管理员权限检测。下面命令加入到要检测的地方即可，如果仅检测无强制管理员要求，则改掉最后的exit命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://www.zhihu.com/question/34541107">点击此处访问</a></p>]]></content>
+        <content type="html"><![CDATA[<p>Bat自动提权。在bat文件开头加入下面的命令则启动时会自动申请管理员权限</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br></pre></td></tr></table></figure><p>Bat管理员权限检测。下面命令加入到要检测的地方即可，如果仅检测无强制管理员要求，则改掉最后的exit命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@(cacls &quot;%SystemDrive%\System Volume Information&quot; &gt;nul 2&gt;&amp;1)||(echo 未赋予管理员权限&amp;echo.&amp;pause&amp;exit /b)</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://www.zhihu.com/question/34541107">点击此处</a></p>]]></content>
       
       
       
@@ -105,7 +145,7 @@
       <link href="/posts/c2be5cd5.html"/>
       <url>/posts/c2be5cd5.html</url>
       
-        <content type="html"><![CDATA[<p>cmd给管理员权限，复制下面命令后替换vhd绝对路径即可压缩vhd文件为实际占用大小。目前仅测试过vhd没有测试过vhdx，但理论上来说应该没有区别</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://www.cnblogs.com/wutou/p/14302569.html">点击此处访问</a></p>]]></content>
+        <content type="html"><![CDATA[<p>cmd给管理员权限，复制下面命令后替换vhd绝对路径即可压缩vhd文件为实际占用大小。目前仅测试过vhd没有测试过vhdx，但理论上来说应该没有区别</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(echo select vdisk file=&quot;vhd绝对路径&quot; &amp; echo detach vdisk &amp; echo attach vdisk readonly &amp; echo compact vdisk &amp; echo detach vdisk)|diskpart</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://www.cnblogs.com/wutou/p/14302569.html">点击此处</a></p>]]></content>
       
       
       
@@ -166,7 +206,7 @@
       <link href="/posts/716af117.html"/>
       <url>/posts/716af117.html</url>
       
-        <content type="html"><![CDATA[<p>1.安装hexo-abbrlink插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>2.修改blog文件夹下的_config.yml<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32   #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex     #进制： dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>3.修改blog –&gt; node_modules –&gt; hexo-asset-image文件夹下的index.js<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处访问</a></p>]]></content>
+        <content type="html"><![CDATA[<p>1.安装hexo-abbrlink插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>2.修改blog文件夹下的_config.yml<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">    alg: crc32   #算法： crc16(default) and crc32</span><br><span class="line">    rep: hex     #进制： dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure><p>3.修改blog –&gt; node_modules –&gt; hexo-asset-image文件夹下的index.js<br>修改前：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改后：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if(/.*\/index\.html$/.test(link)) &#123;</span><br><span class="line">  // when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br><span class="line">  // image in xxtitle/ will go to xxtitle/index/</span><br><span class="line">  appendLink = &#x27;index/&#x27;;</span><br><span class="line">  var endPos = link.lastIndexOf(&#x27;/&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">  var endPos = link.length-5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://blog.csdn.net/Copanko/article/details/105428249">点击此处</a></p>]]></content>
       
       
       
@@ -680,7 +720,7 @@
       <link href="/posts/b697d2f4.html"/>
       <url>/posts/b697d2f4.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Edge用户数据目录：</span><br><span class="line">C:\Users\用户名\AppData\Local\Microsoft\Edge</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://answers.microsoft.com/zh-hans/microsoftedge/forum/all/%E6%80%8E%E4%B9%88%E6%8A%8Aedge%E7%9A%84%E7%94%A8/78f4615d-c41b-4145-b42b-b718b32d98e8">点击此处访问</a></p>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Edge用户数据目录：</span><br><span class="line">C:\Users\用户名\AppData\Local\Microsoft\Edge</span><br></pre></td></tr></table></figure><p>参考出处：<a href="https://answers.microsoft.com/zh-hans/microsoftedge/forum/all/%E6%80%8E%E4%B9%88%E6%8A%8Aedge%E7%9A%84%E7%94%A8/78f4615d-c41b-4145-b42b-b718b32d98e8">点击此处</a></p>]]></content>
       
       
       
