@@ -88,6 +88,63 @@
     
     
     <article
+  id="post-53-Windows下安装Apache"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/posts/9247e11.html"
+    >53.Windows下安装Apache</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/posts/9247e11.html" class="article-date">
+  <time datetime="2023-03-14T15:32:08.000Z" itemprop="datePublished">2023-03-14</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="1-下载Apache"><a href="#1-下载Apache" class="headerlink" title="1.下载Apache"></a>1.下载Apache</h1><p>官网：<a target="_blank" rel="noopener" href="https://httpd.apache.org/">https://httpd.apache.org/</a><br><img src="/posts/9247e11/53-1.png"><br><img src="/posts/9247e11/53-2.png"><br><img src="/posts/9247e11/53-3.png"><br><img src="/posts/9247e11/53-4.png"></p>
+<h1 id="2-修改Apache配置文件"><a href="#2-修改Apache配置文件" class="headerlink" title="2.修改Apache配置文件"></a>2.修改Apache配置文件</h1><p>首先解压出来，修改conf文件夹下的httpd.conf文件<br><img src="/posts/9247e11/53-5.png"><br>找到Define SRVROOT “&#x2F;Apache24”将&#x2F;Apache24更改为解压后的目录<br><img src="/posts/9247e11/53-6.png"><br>如果端口已经被占用则修改Listen 80为别的未占用端口</p>
+<h1 id="3-安装Apache"><a href="#3-安装Apache" class="headerlink" title="3.安装Apache"></a>3.安装Apache</h1><p>打开cmd，cd到bin文件夹下。</p>
+<p>安装命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httpd -k install -n Apache &amp; net start Apache</span><br></pre></td></tr></table></figure>
+<p>卸载命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop Apache &amp; sc delete Apache</span><br></pre></td></tr></table></figure>
+<h1 id="4-访问测试"><a href="#4-访问测试" class="headerlink" title="4.访问测试"></a>4.访问测试</h1><p>在浏览器地址栏输入：<a target="_blank" rel="noopener" href="http://localhost/">http://localhost:80</a><br>出现下图界面，则为成功：<br><img src="/posts/9247e11/53-7.png"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-52-关闭基于虚拟化的安全性(VBS)"
   class="article article-type-post"
   itemscope
@@ -540,63 +597,6 @@
 <p>命令组合修改</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$Name = Get-NetConnectionProfile;Set-NetConnectionProfile -Name $Name.Name -NetworkCategory Private</span><br></pre></td></tr></table></figure>
 <h1 id="方法二：修改注册表（暂时等待后面再总结）"><a href="#方法二：修改注册表（暂时等待后面再总结）" class="headerlink" title="方法二：修改注册表（暂时等待后面再总结）"></a>方法二：修改注册表（暂时等待后面再总结）</h1> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-43-用命令行的方式关闭开启Windows防火墙"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/posts/c6ee7776.html"
-    >43.用命令行的方式关闭开启Windows防火墙</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/posts/c6ee7776.html" class="article-date">
-  <time datetime="2023-03-10T08:17:30.000Z" itemprop="datePublished">2023-03-10</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>开启防火墙</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall set allprofiles state on</span><br></pre></td></tr></table></figure>
-<p>关闭防火墙</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall set allprofiles state off</span><br></pre></td></tr></table></figure>
-<p>重置防火墙</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall reset</span><br></pre></td></tr></table></figure>
-
-<p>单个修改则仅需把allprofiles换成对应的即可<br>域：domainprofile<br>专用：privateprofile<br>公用：publicprofile</p>
- 
       <!-- reward -->
       
     </div>
