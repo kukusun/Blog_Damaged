@@ -1224,7 +1224,7 @@
       <link href="/posts/3a420a88.html"/>
       <url>/posts/3a420a88.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device&quot; /v DevicePasswordLessBuildVersion /t REG_DWORD /d 0 /f</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>cmd窗口下运行下面的命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device&quot; /v DevicePasswordLessBuildVersion /t REG_DWORD /d 0 /f</span><br></pre></td></tr></table></figure><div class="admonition info"><p class="admonition-title">info</p><p>运行该命令需管理员权限</p></div>]]></content>
       
       
       
@@ -1243,7 +1243,7 @@
       <link href="/posts/48d9bdc7.html"/>
       <url>/posts/48d9bdc7.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PowerShell下运行</span><br><span class="line"></span><br><span class="line">添加：</span><br><span class="line">New-NetSwitchTeam -Name &quot;链路聚合&quot; -TeamMembers &quot;以太网&quot;,&quot;以太网 2&quot;</span><br><span class="line"></span><br><span class="line">删除：</span><br><span class="line">Remove-NetSwitchTeam -Name &quot;链路聚合&quot;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>打开PowerShell运行下面的命令<br>添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-NetSwitchTeam -Name &quot;链路聚合&quot; -TeamMembers &quot;以太网&quot;,&quot;以太网 2&quot;</span><br></pre></td></tr></table></figure><p>删除：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Remove-NetSwitchTeam -Name &quot;链路聚合&quot;</span><br></pre></td></tr></table></figure><div class="admonition info"><p class="admonition-title">info</p><p>运行该命令需管理员权限，记得替换TeamMembers中网卡的名称为自己电脑中的网卡名称</p></div>]]></content>
       
       
       
@@ -1262,7 +1262,7 @@
       <link href="/posts/6a083438.html"/>
       <url>/posts/6a083438.html</url>
       
-        <content type="html"><![CDATA[<p>远程主机的rdpclip出了问题，执行下面命令重新启动</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM rdpclip.exe &amp; start rdpclip.exe</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>远程主机的rdpclip.exe出了问题，cmd窗口下执行下面命令重新启动rdpclip.exe</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /F /IM rdpclip.exe &amp; start rdpclip.exe</span><br></pre></td></tr></table></figure><div class="admonition info"><p class="admonition-title">info</p><p>运行该命令需管理员权限</p></div>]]></content>
       
       
       
@@ -1395,7 +1395,7 @@
       <link href="/posts/2d205d52.html"/>
       <url>/posts/2d205d52.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line">Dism /online /Disable-Feature /FeatureName:NetFX3</span><br><span class="line">Dism /online /Enable-Feature /FeatureName:NetFX3 /Source:%~dp0 /NoRestart</span><br></pre></td></tr></table></figure><p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录</p><div class="admonition note"><p class="admonition-title">note</p><p>Net FrameWork 3.5的cab文件为Win10/Win11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p></div>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%1 start &quot;&quot; mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;%~s0&quot;,&quot;::&quot;,&quot;%~dp0&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit</span><br><span class="line">Dism /online /Disable-Feature /FeatureName:NetFX3</span><br><span class="line">Dism /online /Enable-Feature /FeatureName:NetFX3 /Source:%~dp0 /NoRestart</span><br></pre></td></tr></table></figure><p>第一行为bat申请管理员权限，非bat下无需使用<br>第二行作用为关闭Net FrameWork 3.5<br>第三行通过bat中的%~dp0来指定cab安装包在同目录下，如果非bat则将此处更换为实际目录</p><div class="admonition info"><p class="admonition-title">info</p><p>Net FrameWork 3.5的cab文件为Win10/Win11系统包sources\sxs文件夹下microsoft-windows-netfx3开头的cab文件</p></div>]]></content>
       
       
       
