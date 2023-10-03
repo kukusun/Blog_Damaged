@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>75.为Hexo添加警告提示块功能</title>
+      <link href="/posts/7792baa6.html"/>
+      <url>/posts/7792baa6.html</url>
+      
+        <content type="html"><![CDATA[<p>hexo-admonition的GitHub项目页：<a href="https://github.com/lxl80/hexo-admonition">点击此处</a></p><p>1.安装hexo-admonition插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admonition --save</span><br></pre></td></tr></table></figure><p>2.在文章中添加警告提示块<br>每个块都以 !!! 开头，然后是代表提示类型的关键字(type)及标题(title)。例如：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">!!! note Hexo-admonition 插件使用示例</span><br><span class="line">    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。</span><br><span class="line"></span><br><span class="line">    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。</span><br></pre></td></tr></table></figure><p>关键字(type)支持如下类型：</p><ul><li>note</li><li>info, todo</li><li>warning, attention, caution</li><li>error, failure, missing, fail</li></ul><p>样式：<br>!!! note<br>    这是一条note</p><div class="admonition info"><p class="admonition-title">info</p><p>这是一条info</p></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>74.为Hexo网页启用压缩功能</title>
       <link href="/posts/95dd396b.html"/>
       <url>/posts/95dd396b.html</url>
