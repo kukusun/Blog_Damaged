@@ -4,6 +4,86 @@
   
     
     <entry>
+      <title>79.多虚拟终端工具screen</title>
+      <link href="/posts/3fed4e7e.html"/>
+      <url>/posts/3fed4e7e.html</url>
+      
+        <content type="html"><![CDATA[<div class="admonition attention"><p class="admonition-title">attention</p><p>该文章内容为网络搜索得出，目前仅作临时保存用途</p></div><p><a href="https://zhuanlan.zhihu.com/p/405968623">https://zhuanlan.zhihu.com/p/405968623</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>78.多线程下载工具axel</title>
+      <link href="/posts/cee63065.html"/>
+      <url>/posts/cee63065.html</url>
+      
+        <content type="html"><![CDATA[<div class="admonition attention"><p class="admonition-title">attention</p><p>该文章内容为网络搜索得出，目前仅作临时保存用途</p></div><p><a href="https://blog.csdn.net/ARPOSPF/article/details/112163281">https://blog.csdn.net/ARPOSPF/article/details/112163281</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 文件下载与传输 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>77.使用nc进行文件传输</title>
+      <link href="/posts/9a4ae587.html"/>
+      <url>/posts/9a4ae587.html</url>
+      
+        <content type="html"><![CDATA[<div class="admonition attention"><p class="admonition-title">attention</p><p>该文章内容为网络搜索得出，目前仅作临时保存用途</p></div><p><a href="https://blog.csdn.net/mtj66/article/details/74959287">https://blog.csdn.net/mtj66/article/details/74959287</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 文件下载与传输 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>76.Linux文件打包压缩与解包解压</title>
+      <link href="/posts/6e9a80e9.html"/>
+      <url>/posts/6e9a80e9.html</url>
+      
+        <content type="html"><![CDATA[<div class="admonition attention"><p class="admonition-title">attention</p><p>该文章内容为网络搜索得出，目前仅作临时保存用途</p></div><p>1.简单打包和解包<br>tar –cvf test.tar *.txt(打包)<br>tar –xvf test.tar(解包)<br>2.打包压缩成gz<br>tar zcvf test.tar.gz *txt(打包压缩)<br>tar zxvf test.tar.gz(解压)<br>3.打包成bz2格式<br>tar jcvf test.tar.bz2 *.txt(压缩成bz2)<br>tar jxvf test.tar.bz2(解压)<br>4.打包压缩成zip格式<br>zip test.zip *.txt(压缩成zip)<br>unzip test.zip(解压zip)</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>75.为Hexo添加警告提示块功能</title>
       <link href="/posts/7792baa6.html"/>
       <url>/posts/7792baa6.html</url>
@@ -56,7 +136,7 @@
       
         <tags>
             
-            <tag> 软件 </tag>
+            <tag> 文件下载与传输 </tag>
             
         </tags>
       
@@ -95,8 +175,6 @@
         <tags>
             
             <tag> 浏览器 </tag>
-            
-            <tag> 软件 </tag>
             
         </tags>
       
@@ -172,9 +250,7 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
-            <tag> 文件传输 </tag>
+            <tag> 文件下载与传输 </tag>
             
         </tags>
       
@@ -401,8 +477,6 @@
             
             <tag> Office </tag>
             
-            <tag> 软件 </tag>
-            
         </tags>
       
     </entry>
@@ -459,8 +533,6 @@
         <tags>
             
             <tag> Windows </tag>
-            
-            <tag> 软件 </tag>
             
         </tags>
       
@@ -828,8 +900,6 @@
         <tags>
             
             <tag> 浏览器 </tag>
-            
-            <tag> 软件 </tag>
             
         </tags>
       
